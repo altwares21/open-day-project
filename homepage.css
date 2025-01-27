@@ -6,6 +6,7 @@ body {
     color: #333;
 }
 
+/* Navigation Styles */
 nav {
     display: flex;
     justify-content: center;
@@ -25,9 +26,10 @@ nav a:hover {
     background-color: #444459;
 }
 
+/* Hero Section */
 .hero {
     text-align: center;
-    padding: 50px 20px;
+    padding: 10px 20px;
     background-color: #e4e4ed;
 }
 
@@ -40,9 +42,11 @@ nav a:hover {
     font-size: 1.2em;
 }
 
+/* Product Sections */
 .products {
     display: flex;
     flex-wrap: wrap;
+    gap: 20px; /* Space between products */
     justify-content: center;
     padding: 20px;
 }
@@ -51,13 +55,18 @@ nav a:hover {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
-    margin: 10px;
     padding: 15px;
-    width: 200px;
+    width: 200px; /* Fixed width for consistent layout */
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for a clean look */
 }
 
 .product img {
     max-width: 100%;
     border-radius: 5px;
+}
+
+/* Optional: Specific Styling for Categories */
+.tees, .figures {
+    margin-bottom: 20px; /* Space between sections */
 }
