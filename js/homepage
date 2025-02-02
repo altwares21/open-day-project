@@ -1,0 +1,49 @@
+// homepage.js
+
+import { products } from './product.js';
+
+function getRandomProducts(category, count) {
+    const filteredProducts = products.filter(product => product.category === category);
+    console.log(`Filtered products for ${category}:`, filteredProducts);  // Debug log
+    const shuffled = filteredProducts.sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, count);
+}
+
+function createProductHTML(product) {
+    // Check for missing images
+    if (!product.images || product.images.length === 0) {
+        console.error(`Product ${product.name} has no images.`);
+    }
+
+    const imagePath = product.images[0];  // Use the first image
+    return `
+        <div class="product">
+            <img src="${imagePath}" alt="${product.name}">
+            <h3>${product.name}</h3>
+            <p>$${product.price.toFixed(2)}</p>
+        </div>
+    `;
+}
+
+function displayProducts() {
+    const teesSection = document.querySelector('.products.tees .product-container');
+    const figuresSection = document.querySelector('.products.figures .product-container');
+
+    // Clear existing products
+    teesSection.innerHTML = '';
+    figuresSection.innerHTML = '';
+
+    // Get and display random T-Shirts
+    const randomTees = getRandomProducts('T-Shirts', 3);
+    randomTees.forEach(tee => {
+        teesSection.innerHTML += createProductHTML(tee);
+    });
+
+    // Get and display random Figures
+    const randomFigures = getRandomProducts('Figures', 3);
+    randomFigures.forEach(figure => {
+        figuresSection.innerHTML += createProductHTML(figure);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', displayProducts);
