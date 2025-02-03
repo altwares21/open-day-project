@@ -1,21 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apparel</title>
     <link rel="stylesheet" href="css/globalstyle.css">
-    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/catalog.css">
 </head>
+
 <body>
     <header>
-        <h1>Apparel</h1>
+        <div class="header-container">
+            <a href="thisnthatmixupshop.html">
+                <img src="assets/logo.png" alt="Business Logo" class="logo">
+            </a>
+        </div>
     </header>
+
     <nav>
-        <a href="catalog_apparel.html">Apparel</a>
-        <a href="catalog_figures.html">Figures</a>
-        <a href="catalog_accessories.html">Accessories</a>
+        <ul>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Product Catalog</a>
+                <div class="dropdown-content">
+                    <a href="catalog_apparel.html">Apparel</a>
+                    <a href="catalog_accessories.html">Accessories</a>
+                    <a href="catalog_figures.html">Figures</a>
+                </div>
+            </li>
+            <li><a href="#live-stream">Live Stream</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
     </nav>
+
     <section class="products">
         <!-- Apparel Products -->
         <div class="product" data-id="1">
@@ -54,9 +71,25 @@
             <p>$35.00</p>
             <a href="product.html?id=6" class="view-details">View Details</a>
         </div>
+        <div class="product" data-id="7">
+            <img src="products/apparel/saitama-tee.jpg" alt="Saitama Tee">
+            <h3>Saitama Tee</h3>
+            <p>$35.00</p>
+            <a href="product.html?id=7" class="view-details">View Details</a>
+        </div>
+        <div class="product" data-id="8">
+            <img src="products/apparel/neko-luffy-tee.jpg" alt="Neko Luffy Tee">
+            <h3>Neko Luffy Tee</h3>
+            <p>$35.00</p>
+            <a href="product.html?id=8" class="view-details">View Details</a>
+        </div>
     </section>
+
     <footer>
         <p>© 2025 Anime Store</p>
     </footer>
+
+    <script src="js/global.js" defer></script>
+    
 </body>
 </html>

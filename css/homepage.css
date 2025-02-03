@@ -1,18 +1,12 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
-}
-
 /* Navigation Styles */
+/* Ensure the navbar background color is consistent across all pages */
 nav {
     display: flex;
     justify-content: center;
-    background-color: #1bbfd8;
     padding: 10px;
+    background-color: #333; /* Set the background color to the global color */
 }
+
 
 nav a {
     color: #fff;
@@ -52,13 +46,12 @@ nav a:hover {
 }
 
 .product {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
     padding: 15px;
     width: 200px; /* Fixed width for consistent layout */
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for a clean look */
+    background-color: #fff; /* Add white background for products */
+    border-radius: 5px; /* Rounded corners for product cards */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
 }
 
 .product img {
@@ -69,4 +62,49 @@ nav a:hover {
 /* Optional: Specific Styling for Categories */
 .tees, .figures {
     margin-bottom: 20px; /* Space between sections */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .products {
+        gap: 10px; /* Less space between products on smaller screens */
+    }
+
+    .product {
+        width: 150px; /* Reduce product width for smaller screens */
+        padding: 10px; /* Less padding for smaller screens */
+    }
+
+    .hero h1 {
+        font-size: 2em; /* Smaller text for smaller screens */
+    }
+
+    .hero p {
+        font-size: 1em; /* Adjust paragraph size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .products {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        width: 90%; /* Products take up more width on mobile */
+        padding: 10px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 5px 0;
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
 }

@@ -1,60 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>This N That Mix Up Shop</title>
-    <link rel="stylesheet" href="css/homepage.css">
     <link rel="stylesheet" href="css/globalstyle.css">
+    <link rel="stylesheet" href="css/homepage.css">
 </head>
+
 <body>
     <header>
         <div class="header-container">
-            <img src="assets/logo.png" alt="Business Logo" class="logo">
+            <a href="thisnthatmixupshop.html">
+                <img src="assets/logo.png" alt="Business Logo" class="logo">
+            </a>
         </div>
     </header>
-
+    
     <nav>
-        <a href="#products">Product Catalog</a>
-        <a href="#live-stream">Live Stream</a>
-        <a href="#contact">Contact Us</a>
-    </nav>
+        <ul>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Product Catalog</a>
+                <div class="dropdown-content">
+                    <a href="catalog_apparel.html">Apparel</a>
+                    <a href="catalog_accessories.html">Accessories</a>
+                    <a href="catalog_figures.html">Figures</a>
+                </div>
+            </li>
+            <li><a href="#live-stream">Live Stream</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>    
 
-    <section class="hero">
-        <p>Discover exclusive merchandise, collectibles, and more!</p>
-    </section>
+    <main>
+        <section class="hero">
+            <p>Discover exclusive merchandise, collectibles, and more!</p>
+        </section>
 
-    <section class="products tees" id="tees-section">
-        <h2>T-Shirts</h2>
-        <div class="product-container"></div>
-    </section>
+        <section id="products">
+            <section class="products tees" id="tees-section">
+                <h2>Apparel</h2>
+                <div class="product-container"></div>
+            </section>
 
-    <section class="products figures" id="figures-section">
-        <h2>Figures</h2>
-        <div class="product-container"></div>
-    </section>
+            <section class="products figures" id="figures-section">
+                <h2>Figures</h2>
+                <div class="product-container"></div>
+            </section>
+        </section>
 
-    <section id="live-stream" class="hero">
-        <h2>Watch Our Live Streams!</h2>
-        <div>
-            <iframe 
-                src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FYourPage%2Fvideos%2F123456789&show_text=false&width=560" 
-                width="560" 
-                height="315" 
+        <section id="live-stream" class="hero">
+            <h2>Watch Our Live Streams!</h2>
+            <div id="live-stream-container" class="iframe-container">
+                <!-- Default content if no live stream -->
+                <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2F100063759631451%2Fvideos%2F3885182565056874%2F&show_text=false&width=267&t=0" 
+                width="267" 
+                height="476" 
                 style="border:none;overflow:hidden" 
                 scrolling="no" 
                 frameborder="0" 
-                allowfullscreen="true"
-                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-            </iframe>
-        </div>
-    </section>
+                allowfullscreen="true" 
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" 
+                allowFullScreen="true"></iframe>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2025 L.M & Associates.</p>
+    </footer>
 
     <script src="js/product.js" defer></script>
     <script src="js/homepage.js" defer></script>
+    <script src="js/global.js" defer></script>
 
-    <footer>
-        <p>&copy; 2025 Mattu & Associates.</p>
-    </footer>
 </body>
 </html>

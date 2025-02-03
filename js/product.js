@@ -66,10 +66,32 @@ const products = [
         ],
         category: "T-Shirts"
     },
+    {
+        id: 7,
+        name: "Saitama Tee",
+        price: 35.00,
+        description: "A high-quality Saitama t-shirt.",
+        images: [
+            "products/Apparel/saitama-tee.jpg",
+            "products/Apparel/saitama-tee2.jpg"
+        ],
+        category: "T-Shirts"
+    },
+    {
+        id: 8,
+        name: "Neko Luffy Tee",
+        price: 35.00,
+        description: "A high-quality Neko Luffy t-shirt.",
+        images: [
+            "products/Apparel/neko-luffy-tee.jpg",
+            "products/Apparel/neko-luffy-tee2.jpg"
+        ],
+        category: "T-Shirts"
+    },
 
     // Figures Products
     {
-        id: 7,
+        id: 9,
         name: "Luffy Funko Pop",
         price: 45.00,
         description: "A limited edition Funko Pop of Luffy from One Piece.",
@@ -81,7 +103,7 @@ const products = [
         category: "Figures"
     },
     {
-        id: 8,
+        id: 10,
         name: "Aipom Funko Pop",
         price: 45.00,
         description: "A Funko Pop figure of Aipom from Pokémon.",
@@ -93,7 +115,7 @@ const products = [
         category: "Figures"
     },
     {
-        id: 9,
+        id: 11,
         name: "Gambit Funko Pop",
         price: 45.00,
         description: "A collectible Funko Pop of Gambit from X-Men.",
@@ -105,7 +127,7 @@ const products = [
         category: "Figures"
     },
     {
-        id: 10,
+        id: 12,
         name: "Goku Funko Pop",
         price: 45.00,
         description: "A limited edition Funko Pop of Goku.",
@@ -117,7 +139,7 @@ const products = [
         category: "Figures"
     },
     {
-        id: 11,
+        id: 13,
         name: "Meliodas Funko Pop",
         price: 45.00,
         description: "A Funko Pop figure of Meliodas from Seven Deadly Sins.",
@@ -129,7 +151,7 @@ const products = [
         category: "Figures"
     },
     {
-        id: 12,
+        id: 14,
         name: "Mina Funko Pop",
         price: 45.00,
         description: "A Funko Pop figure of Mina from My Hero Academia.",
@@ -137,6 +159,54 @@ const products = [
             "products/Figures/mina-funko.jpg",
             "products/Figures/mina-funko2.jpg",
             "products/Figures/mina-funko3.jpg"
+        ],
+        category: "Figures"
+    },
+    {
+        id: 15,
+        name: "Tengen Uzui Funko Pop",
+        price: 45.00,
+        description: "A Funko Pop figure of Tengen Uzui.",
+        images: [
+            "products/Figures/tengen-funko.jpg",
+            "products/Figures/tengen-funko2.jpg",
+            "products/Figures/tengen-funko3.jpg"
+        ],
+        category: "Figures"
+    },
+    {
+        id: 16,
+        name: "Venom Funko Pop",
+        price: 45.00,
+        description: "A Funko Pop figure of Venom.",
+        images: [
+            "products/Figures/venom-funko.jpg",
+            "products/Figures/venom-funko2.jpg",
+            "products/Figures/venom-funko3.jpg"
+        ],
+        category: "Figures"
+    },
+    {
+        id: 17,
+        name: "Wonder Woman Funko Pop",
+        price: 45.00,
+        description: "A Funko Pop figure of Wonder Woman.",
+        images: [
+            "products/Figures/ww-funko.jpg",
+            "products/Figures/ww-funko2.jpg",
+            "products/Figures/ww-funko3.jpg"
+        ],
+        category: "Figures"
+    },
+    {
+        id: 18,
+        name: "Boruto Funko Pop",
+        price: 45.00,
+        description: "A Funko Pop figure of Boruto.",
+        images: [
+            "products/Figures/boruto-funko.jpg",
+            "products/Figures/boruto-funko2.jpg",
+            "products/Figures/boruto-funko3.jpg"
         ],
         category: "Figures"
     }

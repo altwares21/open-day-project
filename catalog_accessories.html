@@ -5,22 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accessories</title>
     <link rel="stylesheet" href="css/globalstyle.css">
-    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/catalog.css">
 </head>
 <body>
     <header>
-        <h1>Accessories</h1>
+        <div class="header-container">
+            <a href="thisnthatmixupshop.html">
+                <img src="assets/logo.png" alt="Business Logo" class="logo">
+            </a>
+        </div>
     </header>
+    
     <nav>
-        <a href="catalog_apparel.html">Apparel</a>
-        <a href="catalog_figures.html">Figures</a>
-        <a href="catalog_accessories.html">Accessories</a>
+        <ul>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Product Catalog</a>
+                <div class="dropdown-content">
+                    <a href="catalog_apparel.html">Apparel</a>
+                    <a href="catalog_accessories.html">Accessories</a>
+                    <a href="catalog_figures.html">Figures</a>
+                </div>
+            </li>
+            <li><a href="#live-stream">Live Stream</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
     </nav>
+
     <section class="products">
         <p>Accessories will be available soon!</p>
     </section>
     <footer>
         <p>© 2025 Anime Store</p>
     </footer>
+
+    <script src="js/global.js" defer></script>
+    
 </body>
 </html>

@@ -11,13 +11,27 @@
 
 <body>
     <header>
-        <h1>Product Details</h1>
+        <div class="header-container">
+            <a href="thisnthatmixupshop.html">
+                <img src="assets/logo.png" alt="Business Logo" class="logo">
+            </a>
+        </div>
     </header>
+    
 
     <nav>
-        <a href="catalog.html">Shop</a>
-        <a href="#live-stream">Live Stream</a>
-        <a href="#contact">Contact</a>
+        <ul>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Product Catalog</a>
+                <div class="dropdown-content">
+                    <a href="catalog_apparel.html">Apparel</a>
+                    <a href="catalog_accessories.html">Accessories</a>
+                    <a href="catalog_figures.html">Figures</a>
+                </div>
+            </li>
+            <li><a href="#live-stream">Live Stream</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
     </nav>
 
     <section id="product-details">
@@ -37,9 +51,9 @@
         <p>© 2025 Anime Store</p>
     </footer>
 
-    <!-- Load your product.js after the page content -->
     <script src="js/fetch_product.js"></script>
     <script src="js/product.js"></script>
-</body>
+    <script src="js/global.js" defer></script>
 
+</body>
 </html>

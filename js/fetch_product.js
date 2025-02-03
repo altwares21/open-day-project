@@ -15,21 +15,21 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("product-description").textContent = product.description;
 
     // Add image carousel if more than one image exists
-    if (product.images.length > 1) {
-        const imageContainer = document.createElement("div");
-        imageContainer.id = "image-carousel";
+    // if (product.images.length > 1) {
+    //     const imageContainer = document.createElement("div");
+    //     imageContainer.id = "image-carousel";
 
-        product.images.forEach((imgSrc, index) => {
-            const img = document.createElement("img");
-            img.src = imgSrc;
-            img.alt = `Product Image ${index + 1}`;
-            img.className = "thumbnail";
-            img.addEventListener("click", () => {
-                document.getElementById("product-image").src = imgSrc;
-            });
-            imageContainer.appendChild(img);
-        });
+    //     product.images.forEach((imgSrc, index) => {
+    //         const img = document.createElement("img");
+    //         img.src = imgSrc;
+    //         img.alt = `Product Image ${index + 1}`;
+    //         img.className = "thumbnail";
+    //         img.addEventListener("click", () => {
+    //             document.getElementById("product-image").src = imgSrc;
+    //         });
+    //         imageContainer.appendChild(img);
+    //     });
 
-        document.getElementById("product-details").appendChild(imageContainer);
-    }
+    //     document.getElementById("product-details").appendChild(imageContainer);
+    // }
 });

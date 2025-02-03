@@ -1,3 +1,17 @@
+/* General Styles for Products and Content */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    padding-bottom: 0; /* Removed extra padding */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the body takes up at least the full viewport height */
+}
+
+/* Header and Footer Styles */
 /* Header styles */
 header {
     background-color: #fc5f02;
@@ -19,79 +33,56 @@ header p {
 .header-container {
     display: flex;
     align-items: center;
-    justify-content: center; /* Center align for smaller screens */
-    flex-wrap: wrap; /* Adjust layout if the text overflows */
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 10px;
 }
 
 .logo {
-    width: 300px; /* Adjust logo size */
+    width: 300px;
     height: auto;
-    border-radius: 5px; /* Optional for rounded logo edges */
-    margin-right: 15px; /* Space between the logo and text */
+    border-radius: 5px;
+    margin-right: 15px;
 }
 
 @media (max-width: 768px) {
     .header-container {
-        flex-direction: column; /* Stack logo and text on smaller screens */
+        flex-direction: column;
     }
 
     .logo {
-        margin-right: 0; /* Remove side margin for stacked layout */
-        margin-bottom: 10px; /* Add spacing below the logo */
+        margin-right: 0;
+        margin-bottom: 10px;
     }
 }
 
 /* Footer styles */
 footer {
+    width: 100%;
     background-color: #1e1e2f;
-    color: #fff;
+    color: white;
     text-align: center;
-    padding: 10px;
-    margin-top: 20px;
+    position: relative; /* Ensure it's not fixed */
+    margin-top: auto;  /* Ensures footer sticks to bottom when content is short */
+    padding: 20px 0;  /* Added padding for consistency */
 }
 
 footer p {
     margin: 0;
-    font-size: 0.9em;
+    font-size: 1em; /* Adjusted for better visibility */
 }
 
-/* General responsive styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-    background-color: #1bbfd8;
-    padding: 10px;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 15px;
-    padding: 5px 10px;
-    transition: background-color 0.3s;
-}
-
-nav a:hover {
-    background-color: #444459;
-}
-
+/* Main content area styling */
 .products {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
     padding: 20px;
+    margin-bottom: 100px; /* Adds space at the bottom of the products section */
 }
 
+/* Product styling (unchanged) */
 .product {
     background-color: #fff;
     border: 1px solid #ddd;
@@ -107,43 +98,123 @@ nav a:hover {
     border-radius: 5px;
 }
 
-.tees, .figures {
-    margin-bottom: 20px;
+/* Nav Bar Styling */
+nav {
+    background-color: #333;
+    padding: 10px 20px;
 }
 
-/* Responsive styles */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 1em;
+    display: block;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: #fc5f02;
+    border-radius: 5px;
+}
+
+nav .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    padding: 10px 0;
+}
+
+nav .dropdown-content a {
+    padding: 8px 12px;
+}
+
+nav .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Dropdown Styling */
+nav .dropdown:hover > a {
+    background-color: #fc5f02;
+    border-radius: 5px;
+}
+
+/* Responsive Styles for Navbar */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    nav ul li a {
+        font-size: 1.2em;
+        padding: 12px 15px;
+    }
+
+    nav .dropdown-content {
+        min-width: 100%;
+    }
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
     .products {
         gap: 10px;
     }
 
     .product {
-        width: 150px; /* Reduce product width on smaller screens */
+        width: 150px;
         padding: 10px;
     }
 
     header h1 {
-        font-size: 1.8em; /* Smaller header font size */
+        font-size: 1.8em;
     }
 
     header p {
-        font-size: 0.9em; /* Adjust subheader font */
+        font-size: 0.9em;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
     }
 }
 
 @media (max-width: 480px) {
     .products {
-        flex-direction: column; /* Stack products vertically */
+        flex-direction: column;
         align-items: center;
     }
 
     .product {
-        width: 90%; /* Take up most of the screen width */
+        width: 90%;
         padding: 10px;
     }
 
     nav {
-        flex-direction: column; /* Stack navigation links vertically */
+        flex-direction: column;
         align-items: center;
     }
 
@@ -152,6 +223,6 @@ nav a:hover {
     }
 
     footer {
-        font-size: 0.8em; /* Reduce footer text size */
+        font-size: 0.8em;
     }
 }

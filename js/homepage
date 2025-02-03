@@ -4,21 +4,24 @@ import { products } from './product.js';
 
 function getRandomProducts(category, count) {
     const filteredProducts = products.filter(product => product.category === category);
-    console.log(`Filtered products for ${category}:`, filteredProducts);  // Debug log
+    console.log(`Filtered products for ${category}:`, filteredProducts); // Debug log
     const shuffled = filteredProducts.sort(() => 0.5 - Math.random());
     return shuffled.slice(0, count);
 }
 
 function createProductHTML(product) {
-    // Check for missing images
     if (!product.images || product.images.length === 0) {
         console.error(`Product ${product.name} has no images.`);
+        return ''; // Skip this product
     }
 
-    const imagePath = product.images[0];  // Use the first image
+    let imagePath = product.images[0];
+
+    console.log(`Loading image for ${product.name}:`, imagePath); // Debugging log
+
     return `
         <div class="product">
-            <img src="${imagePath}" alt="${product.name}">
+            <img src="${imagePath}" alt="${product.name}" onerror="this.src='assets/placeholder.jpg';">
             <h3>${product.name}</h3>
             <p>$${product.price.toFixed(2)}</p>
         </div>
@@ -26,10 +29,21 @@ function createProductHTML(product) {
 }
 
 function displayProducts() {
-    const teesSection = document.querySelector('.products.tees .product-container');
-    const figuresSection = document.querySelector('.products.figures .product-container');
+    const teesSection = document.querySelector("#tees-section .product-container");
+    const figuresSection = document.querySelector("#figures-section .product-container");
 
-    // Clear existing products
+    if (!teesSection || !figuresSection) {
+        console.error("Product containers not found!");
+        return;
+    }
+
+    // Ensure 'products' array is loaded from product.js
+    if (typeof products === "undefined") {
+        console.error("Products array is not loaded!");
+        return;
+    }
+
+    // Clear existing products before inserting new ones
     teesSection.innerHTML = '';
     figuresSection.innerHTML = '';
 
@@ -46,4 +60,5 @@ function displayProducts() {
     });
 }
 
+// Ensure products are displayed when the page loads
 document.addEventListener('DOMContentLoaded', displayProducts);
