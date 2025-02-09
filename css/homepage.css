@@ -42,7 +42,6 @@ nav a:hover {
     flex-wrap: wrap;
     gap: 20px; /* Space between products */
     justify-content: center;
-    padding: 20px;
 }
 
 .product {
@@ -72,7 +71,6 @@ nav a:hover {
 
     .product {
         width: 150px; /* Reduce product width for smaller screens */
-        padding: 10px; /* Less padding for smaller screens */
     }
 
     .hero h1 {
@@ -92,7 +90,7 @@ nav a:hover {
 
     .product {
         width: 90%; /* Products take up more width on mobile */
-        padding: 10px;
+
     }
 
     nav {

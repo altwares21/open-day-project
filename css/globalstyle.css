@@ -80,6 +80,9 @@ footer p {
     justify-content: center;
     padding: 20px;
     margin-bottom: 100px; /* Adds space at the bottom of the products section */
+    max-width: 1200px; /* Ensures content does not overflow */
+    margin: 0 auto; /* Centers the content */
+    box-sizing: border-box; /* Ensures padding does not cause overflow */
 }
 
 /* Product styling (unchanged) */
@@ -225,4 +228,36 @@ nav .dropdown:hover > a {
     footer {
         font-size: 0.8em;
     }
+}
+
+.view-details {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #fc5f02;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.view-details:hover {
+    background-color: #fc5f02;
+}
+
+.see-more {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.see-more:hover {
+    background-color: #0056b3;
 }

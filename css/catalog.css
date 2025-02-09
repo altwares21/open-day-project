@@ -3,7 +3,6 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 items per row */
     gap: 10px; /* Reduced space between products */
-    padding: 20px;
     justify-items: center; /* Center the products in the grid */
     width: 100%; /* Ensure the grid takes up full width */
     max-width: 1200px; /* Max width for the container to keep it centered */
@@ -14,35 +13,42 @@
     padding: 10px; /* Reduced padding for smaller boxes */
     width: 90%; /* Adjust width to be smaller */
     max-width: 300px; /* Set a maximum width for each item */
+    justify-content: center;
 }
 
 /* Responsive Grid Layout */
 @media (max-width: 1024px) {
     .products {
         grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+        justify-content: center;
     }
 
     .product {
         max-width: 250px; /* Reduce max width for medium screens */
+        justify-content: center;
     }
 }
 
 @media (max-width: 768px) {
     .products {
         grid-template-columns: repeat(2, 1fr); /* 2 items per row on medium screens */
+        justify-content: center;
     }
 
     .product {
         max-width: 200px; /* Further reduce the width */
+        justify-content: center;
     }
 }
 
 @media (max-width: 480px) {
     .products {
         grid-template-columns: 1fr; /* 1 item per row on small screens */
+        justify-content: center;
     }
 
     .product {
         max-width: 150px; /* Reduce width further on small screens */
+        justify-content: center;
     }
 }
