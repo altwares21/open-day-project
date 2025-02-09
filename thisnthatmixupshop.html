@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>This N That Mix Up Shop</title>
     <link rel="stylesheet" href="css/globalstyle.css">
+    <link rel="stylesheet" href="css/catalog.css">
     <link rel="stylesheet" href="css/homepage.css">
 </head>
 
@@ -17,7 +18,7 @@
             </a>
         </div>
     </header>
-    
+
     <nav>
         <ul>
             <li class="dropdown">
@@ -31,41 +32,77 @@
             <li><a href="#live-stream">Live Stream</a></li>
             <li><a href="#contact">Contact Us</a></li>
         </ul>
-    </nav>    
+    </nav>
 
     <main>
         <section class="hero">
             <p>Discover exclusive merchandise, collectibles, and more!</p>
         </section>
 
-        <section id="products">
-            <section class="products tees" id="tees-section">
-                <h2>Apparel</h2>
-                <div class="product-container"></div>
-            </section>
-
-            <section class="products figures" id="figures-section">
-                <h2>Figures</h2>
-                <div class="product-container"></div>
-            </section>
+        <section class="products" id="apparel-section">
+            <h2>Apparel</h2>
+            <div class="products">
+                <div class="product" data-id="1">
+                    <img src="products/apparel/luffy-tee.jpg" alt="Luffy Tee">
+                    <h3>Luffy Tee</h3>
+                    <p>$35.00</p>
+                    <a href="product.html?id=1" class="view-details">View Details</a>
+                </div>
+                <div class="product" data-id="2">
+                    <img src="products/apparel/aot-tee.jpg" alt="AOT Tee">
+                    <h3>Attack on Titan Tee</h3>
+                    <p>$35.00</p>
+                    <a href="product.html?id=2" class="view-details">View Details</a>
+                </div>
+                <div class="product" data-id="3">
+                    <img src="products/apparel/goku-tee.jpg" alt="Goku Tee">
+                    <h3>Goku Tee</h3>
+                    <p>$35.00</p>
+                    <a href="product.html?id=3" class="view-details">View Details</a>
+                </div>
+            </div>
         </section>
+        
+        <section class="products" id="figures-section">
+            <h2>Figures</h2>
+            <div class="products">
+                <div class="product" data-id="9">
+                    <img src="products/Figures/luffy-funko.jpg" alt="Luffy Funko Pop">
+                    <h3>Luffy Funko Pop</h3>
+                    <p>$45.00</p>
+                    <a href="product.html?id=9" class="view-details">View Details</a>
+                </div>
+                <div class="product" data-id="10">
+                    <img src="products/Figures/aipom-funko.jpg" alt="Aipom Funko Pop">
+                    <h3>Aipom Funko Pop</h3>
+                    <p>$45.00</p>
+                    <a href="product.html?id=10" class="view-details">View Details</a>
+                </div>
+                <div class="product" data-id="11">
+                    <img src="products/Figures/gambit-funko.jpg" alt="Gambit Funko Pop">
+                    <h3>Gambit Funko Pop</h3>
+                    <p>$45.00</p>
+                    <a href="product.html?id=11" class="view-details">View Details</a>
+                </div>
+            </div>
+        </section>
+        
+        
+        
 
         <section id="live-stream" class="hero">
             <h2>Watch Our Live Streams!</h2>
             <div id="live-stream-container" class="iframe-container">
                 <!-- Default content if no live stream -->
-                <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2F100063759631451%2Fvideos%2F3885182565056874%2F&show_text=false&width=267&t=0" 
-                width="267" 
-                height="476" 
-                style="border:none;overflow:hidden" 
-                scrolling="no" 
-                frameborder="0" 
-                allowfullscreen="true" 
-                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" 
-                allowFullScreen="true"></iframe>
+                <iframe
+                    src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2F100063759631451%2Fvideos%2F3885182565056874%2F&show_text=false&width=267&t=0"
+                    width="267" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                    allowfullscreen="true"
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                    allowFullScreen="true"></iframe>
             </div>
         </section>
-        
+
     </main>
 
     <footer>
@@ -73,8 +110,8 @@
     </footer>
 
     <script src="js/product.js" defer></script>
-    <script src="js/homepage.js" defer></script>
     <script src="js/global.js" defer></script>
 
 </body>
+
 </html>
