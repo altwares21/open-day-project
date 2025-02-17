@@ -4,7 +4,7 @@ const products = [
         id: 1,
         name: "Luffy Tee",
         price: 35.00,
-        description: "A stylish One Piece t-shirt featuring Monkey D. Luffy.",
+        description: "A One Piece t-shirt featuring Monkey D. Luffy.",
         images: [
             "products/Apparel/luffy-tee.jpg",
             "products/Apparel/luffy-tee2.jpg"
@@ -15,7 +15,7 @@ const products = [
         id: 2,
         name: "Attack on Titan Tee",
         price: 35.00,
-        description: "A high-quality Attack on Titan-themed t-shirt.",
+        description: "An Attack on Titan-themed t-shirt.",
         images: [
             "products/Apparel/aot-tee.jpg",
             "products/Apparel/aot-tee2.jpg"
@@ -24,9 +24,9 @@ const products = [
     },
     {
         id: 3,
-        name: "Goku Tee",
+        name: "Goku Silhouette Tee",
         price: 35.00,
-        description: "A comfortable t-shirt featuring Goku from Dragon Ball.",
+        description: "A t-shirt featuring Goku from Dragon Ball Series.",
         images: [
             "products/Apparel/goku-tee.jpg",
             "products/Apparel/goku-tee2.jpg"
@@ -37,7 +37,7 @@ const products = [
         id: 4,
         name: "Okarun Tee",
         price: 35.00,
-        description: "A stylish t-shirt featuring Okarun from the anime Sakamoto.",
+        description: "A t-shirt featuring Okarun from Dandadan.",
         images: [
             "products/Apparel/okarun-tee.jpg",
             "products/Apparel/okarun-tee2.jpg"
@@ -46,9 +46,9 @@ const products = [
     },
     {
         id: 5,
-        name: "Sakamoto Tee",
+        name: "Sakamoto Days Tee",
         price: 35.00,
-        description: "A fashionable tee from the anime Sakamoto Desu Ga?",
+        description: "A tee from Sakamoto Days",
         images: [
             "products/Apparel/sakamoto-tee.jpg",
             "products/Apparel/sakamoto-tee2.jpg"
@@ -59,7 +59,7 @@ const products = [
         id: 6,
         name: "Turbo Granny Tee",
         price: 35.00,
-        description: "A high-quality Turbo Granny t-shirt.",
+        description: "A Turbo Granny t-shirt from Dandadan.",
         images: [
             "products/Apparel/tg-tee.jpg",
             "products/Apparel/tg-tee2.jpg"
@@ -70,7 +70,7 @@ const products = [
         id: 7,
         name: "Saitama Tee",
         price: 35.00,
-        description: "A high-quality Saitama t-shirt.",
+        description: "A Saitama t-shirt from One Punch Man.",
         images: [
             "products/Apparel/saitama-tee.jpg",
             "products/Apparel/saitama-tee2.jpg"
@@ -81,7 +81,7 @@ const products = [
         id: 8,
         name: "Neko Luffy Tee",
         price: 35.00,
-        description: "A high-quality Neko Luffy t-shirt.",
+        description: "A Neko Luffy t-shirt.",
         images: [
             "products/Apparel/neko-luffy-tee.jpg",
             "products/Apparel/neko-luffy-tee2.jpg"
@@ -94,7 +94,7 @@ const products = [
     id: 9,
     name: "Luffy Funko Pop",
     price: 25.00,
-    description: "A limited edition Funko Pop of Luffy from One Piece.",
+    description: "A Funko Pop figure of Luffy from One Piece.",
     images: [
         "products/Figures/luffy-funko.jpg",
         "products/Figures/luffy-funko2.jpg",
@@ -118,7 +118,7 @@ const products = [
     id: 11,
     name: "Gambit Funko Pop",
     price: 25.00,
-    description: "A collectible Funko Pop of Gambit from X-Men.",
+    description: "A Funko Pop of Gambit from X-Men.",
     images: [
         "products/Figures/gambit-funko.jpg",
         "products/Figures/gambit-funko2.jpg",
@@ -130,7 +130,7 @@ const products = [
     id: 12,
     name: "Goku Funko Pop",
     price: 25.00,
-    description: "A limited edition Funko Pop of Goku.",
+    description: "A Funko Pop of Goku.",
     images: [
         "products/Figures/goku-funko.jpg",
         "products/Figures/goku-funko2.jpg",
@@ -166,7 +166,7 @@ const products = [
     id: 15,
     name: "Tengen Uzui Funko Pop",
     price: 25.00,
-    description: "A Funko Pop figure of Tengen Uzui.",
+    description: "A Funko Pop figure of Tengen Uzui from Demon Slayer.",
     images: [
         "products/Figures/tengen-funko.jpg",
         "products/Figures/tengen-funko2.jpg",

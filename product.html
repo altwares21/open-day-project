@@ -7,6 +7,23 @@
     <title>Product Details</title>
     <link rel="stylesheet" href="css/globalstyle.css">
     <link rel="stylesheet" href="css/product.css">
+    <style>
+        .popup {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        .size-option.selected {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
@@ -15,21 +32,21 @@
             <a href="thisnthatmixupshop.html">
                 <img src="assets/logo.png" alt="Business Logo" class="logo">
             </a>
+            <div class="cart-summary">
+                <a href="cart.html">
+                    <img src="assets/shopping-cart.png" alt="Cart Icon" class="cart-icon">
+                    <span id="cart-count">0</span> items - $<span id="cart-total">0.00</span>
+                </a>
+            </div>
         </div>
     </header>
     
-
     <nav>
         <ul>
-            <li class="dropdown">
-                <a href="#" class="dropbtn">Product Catalog</a>
-                <div class="dropdown-content">
-                    <a href="catalog_apparel.html">Apparel</a>
-                    <a href="catalog_accessories.html">Accessories</a>
-                    <a href="catalog_figures.html">Figures</a>
-                </div>
-            </li>
-            <li><a href="#live-stream">Live Stream</a></li>
+            <li><a href="catalog_apparel.html">Apparel</a></li>
+            <li><a href="catalog_accessories.html">Accessories</a></li>
+            <li><a href="catalog_figures.html">Figures</a></li>
+            <!-- <li><a href="#live-stream">Live Stream</a></li> -->
             <li><a href="aboutus.html">About Us</a></li>
         </ul>
     </nav>
@@ -43,7 +60,24 @@
             <h2 id="product-title"></h2>
             <p id="product-price"></p>
             <p id="product-description"></p>
-            <button>Add to Cart</button>
+            <div id="size-selection" style="display: none;">
+                <label>Size:</label>
+                <div id="size-options" style="display: flex; gap: 10px;">
+                    <button class="size-option" data-size="S">S</button>
+                    <button class="size-option" data-size="M">M</button>
+                    <button class="size-option" data-size="L">L</button>
+                    <button class="size-option" data-size="XL">XL</button>
+                    <button class="size-option" data-size="XXL">XXL</button>
+                    <button class="size-option" data-size="XXXL">XXXL</button>
+                </div>
+            </div>
+            <label for="quantity">Quantity:</label>
+            <div class="quantity-controls">
+                <button id="decrease-quantity">-</button>
+                <span id="quantity-display">1</span>
+                <button id="increase-quantity">+</button>
+            </div>
+            <button id="add-to-cart">Add to Cart</button>
         </div>
     </section>
 
@@ -54,6 +88,55 @@
     <script src="js/fetch_product.js"></script>
     <script src="js/product.js"></script>
     <script src="js/global.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script>
+        function showPopup(message) {
+            const popup = document.createElement('div');
+            popup.className = 'popup';
+            popup.textContent = message;
+            document.body.appendChild(popup);
+            setTimeout(() => {
+                popup.remove();
+            }, 3000);
+        }
+
+        const quantityDisplay = document.getElementById('quantity-display');
+        let quantity = 1;
+
+        document.getElementById('decrease-quantity').addEventListener('click', function() {
+            if (quantity > 1) {
+                quantity--;
+                quantityDisplay.textContent = quantity;
+            }
+        });
+
+        document.getElementById('increase-quantity').addEventListener('click', function() {
+            quantity++;
+            quantityDisplay.textContent = quantity;
+        });
+
+        document.getElementById('add-to-cart').addEventListener('click', function() {
+            const selectedSizeElement = document.querySelector('.size-option.selected');
+            const size = selectedSizeElement ? selectedSizeElement.getAttribute('data-size') : null;
+            const product = {
+                id: parseInt(new URLSearchParams(window.location.search).get('id')),
+                name: document.getElementById('product-title').innerText,
+                price: parseFloat(document.getElementById('product-price').innerText.replace('$', '')),
+                quantity: quantity,
+                size: size,
+                image: document.getElementById('product-image').src
+            };
+            addToCart(product);
+            showPopup('Item added to cart!');
+        });
+
+        document.querySelectorAll('.size-option').forEach(option => {
+            option.addEventListener('click', function() {
+                document.querySelectorAll('.size-option').forEach(opt => opt.classList.remove('selected'));
+                this.classList.add('selected');
+            });
+        });
+    </script>
 
 </body>
 </html>

@@ -6,6 +6,25 @@
     <title>Accessories</title>
     <link rel="stylesheet" href="css/globalstyle.css">
     <link rel="stylesheet" href="css/catalog.css">
+    <style>
+        .center-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30vh; /* Adjusted height */
+            border: 2px solid #000;
+            padding: 20px;
+            margin: 20px auto;
+            text-align: center;
+            max-width: 80%;
+        }
+        .products {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 200px); /* Adjust based on header/footer height */
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -13,32 +32,37 @@
             <a href="thisnthatmixupshop.html">
                 <img src="assets/logo.png" alt="Business Logo" class="logo">
             </a>
+            <div class="cart-summary">
+                <a href="cart.html">
+                    <img src="assets/shopping-cart.png" alt="Cart Icon" class="cart-icon">
+                    <span id="cart-count">0</span> items - $<span id="cart-total">0.00</span>
+                </a>
+            </div>
         </div>
     </header>
     
     <nav>
         <ul>
-            <li class="dropdown">
-                <a href="#" class="dropbtn">Product Catalog</a>
-                <div class="dropdown-content">
-                    <a href="catalog_apparel.html">Apparel</a>
-                    <a href="catalog_accessories.html">Accessories</a>
-                    <a href="catalog_figures.html">Figures</a>
-                </div>
-            </li>
-            <li><a href="#live-stream">Live Stream</a></li>
+            <li><a href="catalog_apparel.html">Apparel</a></li>
+            <li><a href="catalog_accessories.html">Accessories</a></li>
+            <li><a href="catalog_figures.html">Figures</a></li>
             <li><a href="aboutus.html">About Us</a></li>
         </ul>
     </nav>
 
     <section class="products">
-        <p>Accessories will be available soon!</p>
+        <div class="center-box">
+            <p>Accessories will be available soon!</p>
+        </div>
     </section>
     <footer>
-        <p>© 2025 Anime Store</p>
+        <p>&copy; 2025 Anime Store</p>
     </footer>
 
+    <script src="js/fetch_product.js"></script>
+    <script src="js/product.js"></script>
     <script src="js/global.js" defer></script>
+    <script src="js/cart.js" defer></script>
     
 </body>
 </html>
