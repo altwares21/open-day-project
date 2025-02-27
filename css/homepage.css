@@ -1,4 +1,4 @@
-/* Hero Section */
+
 .hero {
     text-align: center;
     padding: 10px 20px;
@@ -14,21 +14,20 @@
     font-size: 1.2em;
 }
 
-/* Product Sections */
 .products {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* Space between products */
+    gap: 20px;
     justify-content: center;
 }
 
 .product {
     padding: 15px;
-    width: 200px; /* Fixed width for consistent layout */
+    width: 200px;
     text-align: center;
-    background-color: #fff; /* Add white background for products */
-    border-radius: 5px; /* Rounded corners for product cards */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+    background-color: #fff;
+    border-radius: 5px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 .product img {
@@ -36,38 +35,36 @@
     border-radius: 5px;
 }
 
-/* Optional: Specific Styling for Categories */
 .tees, .figures {
-    margin-bottom: 20px; /* Space between sections */
+    margin-bottom: 20px;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .products {
-        gap: 10px; /* Less space between products on smaller screens */
+        gap: 10px;
     }
 
     .product {
-        width: 150px; /* Reduce product width for smaller screens */
+        width: 150px;
     }
 
     .hero h1 {
-        font-size: 2em; /* Smaller text for smaller screens */
+        font-size: 2em;
     }
 
     .hero p {
-        font-size: 1em; /* Adjust paragraph size for smaller screens */
+        font-size: 1em;
     }
 }
 
 @media (max-width: 480px) {
     .products {
         flex-direction: column;
-        align-items: center;
+        align-items: center; 
     }
 
     .product {
-        width: 90%; /* Products take up more width on mobile */
+        width: 90%;
 
     }
 
@@ -83,4 +80,4 @@
     footer {
         font-size: 0.8em;
     }
-}
+} */

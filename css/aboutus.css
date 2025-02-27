@@ -11,7 +11,7 @@ main {
     margin: 0 auto;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding-bottom: 60px; /* Add padding to the bottom */
+    padding-bottom: 60px;
 }
 
 .about-us h1 {

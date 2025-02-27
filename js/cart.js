@@ -25,7 +25,7 @@ function updateCartSummary() {
     const cartTotal = cart.reduce((total, item) => total + parseFloat(item.price) * item.quantity, 0).toFixed(2);
     const cartCountElement = document.getElementById('cart-count');
     const cartTotalElement = document.getElementById('cart-total');
-    const cartTotalBottomElement = document.querySelector('#cart-details #cart-total');
+    const cartTotalBottomElement = document.querySelector('#cart-details #cart-total'); // Update this line
     if (cartCountElement) {
         cartCountElement.textContent = cartCount;
     }
@@ -110,6 +110,7 @@ function renderCartItems() {
                 cart[productIndex].quantity--;
                 localStorage.setItem('cart', JSON.stringify(cart));
                 renderCartItems();
+                updateCartSummary(); // Update cart summary
             }
         });
     });
@@ -124,6 +125,7 @@ function renderCartItems() {
                 cart[productIndex].quantity++;
                 localStorage.setItem('cart', JSON.stringify(cart));
                 renderCartItems();
+                updateCartSummary(); // Update cart summary
             }
         });
     });

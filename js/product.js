@@ -93,7 +93,7 @@ const products = [
 {
     id: 9,
     name: "Luffy Funko Pop",
-    price: 25.00,
+    price: 55.00, // Updated price
     description: "A Funko Pop figure of Luffy from One Piece.",
     images: [
         "products/Figures/luffy-funko.jpg",
@@ -105,7 +105,7 @@ const products = [
 {
     id: 10,
     name: "Aipom Funko Pop",
-    price: 25.00,
+    price: 55.00, // Updated price
     description: "A Funko Pop figure of Aipom from Pokémon.",
     images: [
         "products/Figures/aipom-funko.jpg",
@@ -117,7 +117,7 @@ const products = [
 {
     id: 11,
     name: "Gambit Funko Pop",
-    price: 25.00,
+    price: 65.00, // Updated price
     description: "A Funko Pop of Gambit from X-Men.",
     images: [
         "products/Figures/gambit-funko.jpg",
@@ -129,7 +129,7 @@ const products = [
 {
     id: 12,
     name: "Goku Funko Pop",
-    price: 25.00,
+    price: 65.00, // Updated price
     description: "A Funko Pop of Goku.",
     images: [
         "products/Figures/goku-funko.jpg",
@@ -141,7 +141,7 @@ const products = [
 {
     id: 13,
     name: "Meliodas Funko Pop",
-    price: 25.00,
+    price: 65.00, // Updated price
     description: "A Funko Pop figure of Meliodas from Seven Deadly Sins.",
     images: [
         "products/Figures/melodias-funko.jpg",
@@ -165,7 +165,7 @@ const products = [
 {
     id: 15,
     name: "Tengen Uzui Funko Pop",
-    price: 25.00,
+    price: 65.00, // Updated price
     description: "A Funko Pop figure of Tengen Uzui from Demon Slayer.",
     images: [
         "products/Figures/tengen-funko.jpg",
@@ -177,7 +177,7 @@ const products = [
 {
     id: 16,
     name: "Venom Funko Pop",
-    price: 25.00,
+    price: 55.00, // Updated price
     description: "A Funko Pop figure of Venom.",
     images: [
         "products/Figures/venom-funko.jpg",
@@ -189,7 +189,7 @@ const products = [
 {
     id: 17,
     name: "Wonder Woman Funko Pop",
-    price: 25.00,
+    price: 35.00, // Updated price
     description: "A Funko Pop figure of Wonder Woman.",
     images: [
         "products/Figures/ww-funko.jpg",
@@ -201,7 +201,7 @@ const products = [
 {
     id: 18,
     name: "Boruto Funko Pop",
-    price: 25.00,
+    price: 50.00, // Updated price
     description: "A Funko Pop figure of Boruto.",
     images: [
         "products/Figures/boruto-funko.jpg",
