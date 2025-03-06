@@ -9,7 +9,7 @@ const products = [
             "products/Apparel/luffy-tee.jpg",
             "products/Apparel/luffy-tee2.jpg"
         ],
-        category: "T-Shirts"
+        category: "Apparel"
     },
     {
         id: 2,
@@ -20,7 +20,7 @@ const products = [
             "products/Apparel/aot-tee.jpg",
             "products/Apparel/aot-tee2.jpg"
         ],
-        category: "T-Shirts"
+        category: "Apparel"
     },
     {
         id: 3,
@@ -31,7 +31,7 @@ const products = [
             "products/Apparel/goku-tee.jpg",
             "products/Apparel/goku-tee2.jpg"
         ],
-        category: "T-Shirts"
+        category: "Apparel"
     },
     {
         id: 4,
@@ -42,7 +42,7 @@ const products = [
             "products/Apparel/okarun-tee.jpg",
             "products/Apparel/okarun-tee2.jpg"
         ],
-        category: "T-Shirts"
+        category: "Apparel"
     },
     {
         id: 5,
@@ -53,7 +53,7 @@ const products = [
             "products/Apparel/sakamoto-tee.jpg",
             "products/Apparel/sakamoto-tee2.jpg"
         ],
-        category: "T-Shirts"
+        category: "Apparel"
     },
     {
         id: 6,
@@ -64,7 +64,7 @@ const products = [
             "products/Apparel/tg-tee.jpg",
             "products/Apparel/tg-tee2.jpg"
         ],
-        category: "T-Shirts"
+        category: "Apparel"
     },
     {
         id: 7,
@@ -75,7 +75,7 @@ const products = [
             "products/Apparel/saitama-tee.jpg",
             "products/Apparel/saitama-tee2.jpg"
         ],
-        category: "T-Shirts"
+        category: "Apparel"
     },
     {
         id: 8,
@@ -86,7 +86,7 @@ const products = [
             "products/Apparel/neko-luffy-tee.jpg",
             "products/Apparel/neko-luffy-tee2.jpg"
         ],
-        category: "T-Shirts"
+        category: "Apparel"
     },
 
     // Figures Products
@@ -212,48 +212,49 @@ const products = [
 }
 ];
 
-// Extract product ID from the URL query string
-const urlParams = new URLSearchParams(window.location.search);
-const productId = parseInt(urlParams.get('id')); // Get the product ID from the URL
+document.addEventListener("DOMContentLoaded", function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = parseInt(urlParams.get('id')); // Get the product ID from the URL
 
-// Find the product from the hardcoded array based on the ID
-const product = products.find(item => item.id === productId);
+    // Find the product from the hardcoded array based on the ID
+    const product = products.find(item => item.id === productId);
 
-if (product) {
-    // Update product information dynamically
-    document.getElementById("product-title").textContent = product.name;
-    document.getElementById("product-price").textContent = `$${product.price.toFixed(2)}`;
-    document.getElementById("product-description").textContent = product.description;
+    if (product) {
+        // Update product information dynamically
+        document.getElementById("product-title").textContent = product.name;
+        document.getElementById("product-price").textContent = `$${product.price.toFixed(2)}`;
+        document.getElementById("product-description").textContent = product.description;
 
-    const productImage = document.getElementById("product-image");
-    productImage.src = product.images[0]; // Set the first image as the default product image
+        const productImage = document.getElementById("product-image");
+        productImage.src = product.images[0]; // Set the first image as the default product image
 
-    // Create thumbnails dynamically for the product images
-    const imageThumbnailsContainer = document.getElementById("image-thumbnails");
-    product.images.forEach((image, index) => {
-        const thumbnail = document.createElement("img");
-        thumbnail.src = image;
-        thumbnail.classList.add("thumbnail");
-        thumbnail.alt = `${product.name} image ${index + 1}`;
+        // Create thumbnails dynamically for the product images
+        const imageThumbnailsContainer = document.getElementById("image-thumbnails");
+        product.images.forEach((image, index) => {
+            const thumbnail = document.createElement("img");
+            thumbnail.src = image;
+            thumbnail.classList.add("thumbnail");
+            thumbnail.alt = `${product.name} image ${index + 1}`;
 
-        // Add active class for the first image
-        if (index === 0) {
-            thumbnail.classList.add("active");
-        }
+            // Add active class for the first image
+            if (index === 0) {
+                thumbnail.classList.add("active");
+            }
 
-        // Add thumbnail to the container
-        imageThumbnailsContainer.appendChild(thumbnail);
+            // Add thumbnail to the container
+            imageThumbnailsContainer.appendChild(thumbnail);
 
-        // Event listener for changing the main image on thumbnail click
-        thumbnail.addEventListener("click", () => {
-            productImage.src = image;
-            document.querySelectorAll(".thumbnail").forEach(thumb => {
-                thumb.classList.remove("active");
+            // Event listener for changing the main image on thumbnail click
+            thumbnail.addEventListener("click", () => {
+                productImage.src = image;
+                document.querySelectorAll(".thumbnail").forEach(thumb => {
+                    thumb.classList.remove("active");
+                });
+                thumbnail.classList.add("active");
             });
-            thumbnail.classList.add("active");
         });
-    });
-} else {
-    // If the product is not found, display an error
-    console.error("Product not found!");
-}
+    } else {
+        // If the product is not found, display an error
+        console.error("Product not found!");
+    }
+});
