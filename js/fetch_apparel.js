@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const apparelProductsContainer = document.getElementById("apparel-products");
 
     // Filter apparel products from the products array
-    const apparelProducts = products.filter(product => product.category === "T-Shirts");
+    const apparelProducts = products.filter(product => product.category === "Apparel");
 
     // Generate product cards dynamically
     apparelProducts.forEach(product => {
@@ -12,9 +12,8 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="card h-100">
                 <img src="${product.images[0]}" class="card-img-top img-fluid lazy" alt="${product.name}" loading="lazy">
                 <div class="card-body">
-                    <h5 class="card-title">${product.name}</h5>
-                    <p class="card-text">${product.description}</p>
-                    <p class="card-text">$${product.price.toFixed(2)}</p>
+                    <h5 class="card-title text-center">${product.name}</h5>
+                    <p class="card-text text-center">$${product.price.toFixed(2)}</p>
                 </div>
             </div>
         `;
