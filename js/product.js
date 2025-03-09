@@ -90,7 +90,7 @@ const products = [
     },
     {
         id: 19,
-        name: "AOT Scouting Legion Tee",
+        name: "Scouting Legion Tee",
         price: 35.00,
         description: "An Attack on Titan-themed t-shirt.",
         images: [
@@ -101,15 +101,15 @@ const products = [
     },
     {
         id: 20,
-        name: "Brook Tee",
+        name: "Pikachu Tee",
         price: 35.00,
-        description: "A One Piece t-shirt featuring Brook.",
+        description: "A Pikachu-themed t-shirt.",
         images: [
-            "products/Apparel/brook-tee.jpg",
-            "products/Apparel/brook-tee2.jpg",
-            "products/Apparel/brook-tee3.jpg"
+            "products/Apparel/pikachu-tee.jpg",
+            "products/Apparel/pikachu-tee2.jpg"
         ],
         category: "Apparel"
+        
     },
     {
         id: 21,
@@ -146,12 +146,13 @@ const products = [
     },
     {
         id: 24,
-        name: "Pikachu Tee",
+        name: "Brook Tee",
         price: 35.00,
-        description: "A Pikachu-themed t-shirt.",
+        description: "A One Piece t-shirt featuring Brook.",
         images: [
-            "products/Apparel/pikachu-tee.jpg",
-            "products/Apparel/pikachu-tee2.jpg"
+            "products/Apparel/brook-tee.jpg",
+            "products/Apparel/brook-tee2.jpg",
+            "products/Apparel/brook-tee3.jpg"
         ],
         category: "Apparel"
     },
@@ -159,17 +160,17 @@ const products = [
     //Dry Fit Tees
     {
         id: 25,
-        name: "Crash Bandicoot DryFit Tee",
+        name: "Ichigo (Mugetsu) Dry Fit Tee",
         price: 50.00,
-        description: "A Crash Bandicoot-themed dry fit t-shirt.",
+        description: "A Bleach-themed dry fit t-shirt.",
         images: [
-            "products/DryFit/crash-dryfit.jpg"
+            "products/DryFit/ichigo-dryfit.jpg"
         ],
         category: "Dry Fit"
     },
     {
         id: 26,
-        name: "Death Notre DryFit Tee",
+        name: "Death Note Dry Fit Tee",
         price: 50.00,
         description: "A Death Note-themed dry fit t-shirt.",
         images: [
@@ -179,7 +180,7 @@ const products = [
     },
     {
         id: 27,
-        name: "Eren Yeager DryFit Tee",
+        name: "Eren Yeager Dry Fit Tee",
         price: 50.00,
         description: "An Attack on Titan-themed dry fit t-shirt.",
         images: [
@@ -189,7 +190,7 @@ const products = [
     },
     {
         id: 28,
-        name: "Goku DryFit Tee",
+        name: "Goku & Vegeta Dry Fit Tee",
         price: 50.00,
         description: "A Dragon Ball-themed dry fit t-shirt.",
         images: [
@@ -199,17 +200,17 @@ const products = [
     },
     {
         id: 29,
-        name: "Hellsing DryFit Tee",
+        name: "Jin Kazuma Dry Fit Tee",
         price: 50.00,
-        description: "A Hellsing-themed dry fit t-shirt.",
+        description: "A Tekken-themed dry fit t-shirt.",
         images: [
-            "products/DryFit/hellsing-dryfit.jpg"
+            "products/DryFit/jin-dryfit.jpg"
         ],
         category: "Dry Fit"
     },
     {
         id: 30,
-        name: "Ikkaku DryFit Tee",
+        name: "Ikkaku Dry Fit Tee",
         price: 50.00,
         description: "A Bleach-themed dry fit t-shirt.",
         images: [
@@ -219,27 +220,27 @@ const products = [
     },
     {
         id: 31,
-        name: "Jinx DryFit Tee",
+        name: "Arcane LoL Dry Fit Tee",
         price: 50.00,
-        description: "A Jinx-themed dry fit t-shirt.",
+        description: "An Arcane-themed dry fit t-shirt.",
+        images: [
+            "products/DryFit/arcane-dryfit.jpg"
+        ],
+        category: "Dry Fit"
+    },
+    {
+        id: 32,
+        name: "Arcane Jinx Dry Fit Tee",
+        price: 50.00,
+        description: "An Arcane Jinx-themed dry fit t-shirt.",
         images: [
             "products/DryFit/jinx-dryfit.jpg"
         ],
         category: "Dry Fit"
     },
     {
-        id: 32,
-        name: "Alternate Jinx DryFit Tee",
-        price: 50.00,
-        description: "An alternate Jinx-themed dry fit t-shirt.",
-        images: [
-            "products/DryFit/jinx-dryfit2.jpg"
-        ],
-        category: "Dry Fit"
-    },
-    {
         id: 33,
-        name: "Kratos DryFit Tee",
+        name: "Kratos Dry Fit Tee",
         price: 50.00,
         description: "A God of War-themed dry fit t-shirt.",
         images: [
@@ -249,17 +250,17 @@ const products = [
     },
     {
         id: 34,
-        name: "Levi DryFit Tee",
+        name: "Akuma Dry Fit Tee",
         price: 50.00,
-        description: "An Attack on Titan-themed dry fit t-shirt.",
+        description: "A Street Fighter-themed dry fit t-shirt.",
         images: [
-            "products/DryFit/levi-dryfit.jpg"
+            "products/DryFit/akuma-dryfit.jpg"
         ],
         category: "Dry Fit"
     },
     {
         id: 35,
-        name: "Mitsuri DryFit Tee",
+        name: "Mitsuri Dry Fit Tee",
         price: 50.00,
         description: "A Demon Slayer-themed dry fit t-shirt.",
         images: [
@@ -269,7 +270,7 @@ const products = [
     },
     {
         id: 36,
-        name: "Momo DryFit Tee",
+        name: "Momo Dry Fit Tee",
         price: 50.00,
         description: "A Dandadan-themed dry fit t-shirt.",
         images: [
@@ -279,17 +280,17 @@ const products = [
     },
     {
         id: 37,
-        name: "naruto DryFit Tee",
+        name: "Yujiro Hanma Dry Fit Tee",
         price: 50.00,
-        description: "A Naruto-themed dry fit t-shirt.",
+        description: "A Baki-themed dry fit t-shirt.",
         images: [
-            "products/DryFit/naruto-dryfit.jpg"
+            "products/DryFit/yujiro-dryfit.jpg"
         ],
         category: "Dry Fit"
     },
     {
         id: 38,
-        name: "Natsu DryFit Tee",
+        name: "Natsu Dry Fit Tee",
         price: 50.00,
         description: "A Fairy Tail-themed dry fit t-shirt.",
         images: [
@@ -299,7 +300,7 @@ const products = [
     },
     {
         id: 39,
-        name: "Nezuku DryFit Tee",
+        name: "Nezuku Dry Fit Tee",
         price: 50.00,
         description: "A Demon Slayer dry fit t-shirt.",
         images: [
@@ -309,7 +310,7 @@ const products = [
     },
     {
         id: 40,
-        name: "Okarun DryFit Tee",
+        name: "Okarun Dry Fit Tee",
         price: 50.00,
         description: "A Dandadan-themed dry fit t-shirt.",
         images: [
@@ -319,27 +320,17 @@ const products = [
     },
     {
         id: 41,
-        name: "One Piece DryFit Tee",
+        name: "Vegeta Dry Fit Tee",
         price: 50.00,
-        description: "A One Piece-themed dry fit t-shirt.",
+        description: "A Dragon Ball-themed dry fit t-shirt.",
         images: [
-            "products/DryFit/one-piece-dryfit.jpg"
+            "products/DryFit/vegeta-dryfit.jpg"
         ],
         category: "Dry Fit"
     },
     {
         id: 42,
-        name: "Alternate One Piece DryFit Tee",
-        price: 50.00,
-        description: "An alternate One Piece-themed dry fit t-shirt.",
-        images: [
-            "products/DryFit/one-piece-dryfit2.jpg"
-        ],
-        category: "Dry Fit"
-    },
-    {
-        id: 43,
-        name: "Rias Gremory DryFit Tee",
+        name: "Rias Gremory Dry Fit Tee",
         price: 50.00,
         description: "A High School DxD-themed dry fit t-shirt.",
         images: [
@@ -348,18 +339,28 @@ const products = [
         category: "Dry Fit"
     },
     {
-        id: 44,
-        name: "Sasuke DryFit Tee",
+        id: 43,
+        name: "One Piece Dry Fit Tee",
         price: 50.00,
-        description: "A Naruto-themed dry fit t-shirt.",
+        description: "A One Piece-themed dry fit t-shirt.",
         images: [
-            "products/DryFit/sasuke-dryfit.jpg"
+            "products/DryFit/one-piece-dryfit.jpg"
+        ],
+        category: "Dry Fit"
+    },
+    {
+        id: 44,
+        name: "Alternate One Piece Dry Fit Tee",
+        price: 50.00,
+        description: "An alternate One Piece-themed dry fit t-shirt.",
+        images: [
+            "products/DryFit/one-piece-dryfit2.jpg"
         ],
         category: "Dry Fit"
     },
     {
         id: 45,
-        name: "Alternate Sasuke DryFit Tee",
+        name: "Alternate Sasuke Dry Fit Tee",
         price: 50.00,
         description: "An alternate Naruto-themed dry fit t-shirt.",
         images: [
@@ -369,31 +370,61 @@ const products = [
     },
     {
         id: 46,
-        name: "Vegate DryFit Tee",
+        name: "Sasuke Dry Fit Tee",
         price: 50.00,
-        description: "A Dragon Ball-themed dry fit t-shirt.",
+        description: "A Naruto-themed dry fit t-shirt.",
         images: [
-            "products/DryFit/vegeta-dryfit.jpg"
+            "products/DryFit/sasuke-dryfit.jpg"
         ],
         category: "Dry Fit"
     },
     {
         id: 47,
-        name: "Yujiro Hanma DryFit Tee",
+        name: "Naruto Dry Fit Tee",
         price: 50.00,
-        description: "A Baki-themed dry fit t-shirt.",
+        description: "A Naruto-themed dry fit t-shirt.",
         images: [
-            "products/DryFit/yujiro-dryfit.jpg"
+            "products/DryFit/naruto-dryfit.jpg"
         ],
         category: "Dry Fit"
     },
     {
         id: 48,
-        name: "Zoro DryFit Tee",
+        name: "Zoro Dry Fit Tee",
         price: 50.00,
         description: "A One Piece-themed dry fit t-shirt.",
         images: [
             "products/DryFit/zoro-dryfit.jpg"
+        ],
+        category: "Dry Fit"
+    },
+    {
+        id: 49,
+        name: "Levi Dry Fit Tee",
+        price: 50.00,
+        description: "An Attack on Titan-themed dry fit t-shirt.",
+        images: [
+            "products/DryFit/levi-dryfit.jpg"
+        ],
+        category: "Dry Fit"
+    },
+    {
+        id: 50,
+        name: "Hellsing Dry Fit Tee",
+        price: 50.00,
+        description: "A Hellsing-themed dry fit t-shirt.",
+        images: [
+            "products/DryFit/hellsing-dryfit.jpg"
+        ],
+        category: "Dry Fit"
+    },
+    {
+        id: 51,
+        name: "Crash Bandicoot Dry Fit Tee",
+        price: 50.00,
+        description: "A Crash Bandicoot-themed dry fit t-shirt.",
+        images: [
+            "products/DryFit/crash-dryfit.jpg"
         ],
         category: "Dry Fit"
     },
@@ -461,7 +492,7 @@ const products = [
     },
     {
         id: 14,
-        name: "Mina Funko Pop",
+        name: "Mina Ashido Funko Pop",
         price: 25.00,
         description: "A Funko Pop figure of Mina from My Hero Academia.",
         images: [
