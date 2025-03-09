@@ -10,7 +10,9 @@ document.addEventListener("DOMContentLoaded", function () {
         productCard.className = "col-12 col-sm-6 col-md-4 col-lg-3 mb-4";
         productCard.innerHTML = `
             <div class="card h-100">
-                <img src="${product.images[0]}" class="card-img-top img-fluid lazy" alt="${product.name}" loading="lazy">
+                <a href="product.html?id=${product.id}">
+                    <img src="${product.images[0]}" class="card-img-top img-fluid lazy" alt="${product.name}" loading="lazy">
+                </a>
                 <div class="card-body">
                     <h5 class="card-title text-center">${product.name}</h5>
                     <p class="card-text text-center">$${product.price.toFixed(2)}</p>
@@ -19,4 +21,26 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
         apparelProductsContainer.appendChild(productCard);
     });
+
+    const dryFitProductsContainer = document.getElementById("dry-fit-products");
+
+    const dryFitProducts = products.filter(product => product.category === "Dry Fit");
+
+    dryFitProducts.forEach(product => {
+        const productCard = document.createElement("div");
+        productCard.className = "col-12 col-sm-6 col-md-4 col-lg-3 mb-4";
+        productCard.innerHTML = `
+            <div class="card h-100">
+                <a href="product.html?id=${product.id}">
+                    <img src="${product.images[0]}" class="card-img-top img-fluid lazy" alt="${product.name}" loading="lazy">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title text-center">${product.name}</h5>
+                    <p class="card-text text-center">$${product.price.toFixed(2)}</p>
+                </div>
+            </div>
+        `;
+        dryFitProductsContainer.appendChild(productCard);
+    }
+    ); 
 });

@@ -47,7 +47,23 @@ document.addEventListener("DOMContentLoaded", function() {
         if (product.category === "Apparel") {
             document.getElementById("product-sizes").style.display = "block";
             const sizeButtonsContainer = document.getElementById("size-buttons");
-            const sizes = ["S", "M", "L", "XL", "XXL"];
+            const sizes = ["S", "M", "L", "XL", "2XL", "3XL"];
+            sizes.forEach(size => {
+                const sizeButton = document.createElement("button");
+                sizeButton.classList.add("btn", "btn-outline-primary", "size-button");
+                sizeButton.textContent = size;
+                sizeButton.addEventListener("click", () => {
+                    document.querySelectorAll(".size-button").forEach(btn => {
+                        btn.classList.remove("active");
+                    });
+                    sizeButton.classList.add("active");
+                });
+                sizeButtonsContainer.appendChild(sizeButton);
+            });
+        } else if (product.category === "Dry Fit") {
+            document.getElementById("product-sizes").style.display = "block";
+            const sizeButtonsContainer = document.getElementById("size-buttons");
+            const sizes = ["S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL"];
             sizes.forEach(size => {
                 const sizeButton = document.createElement("button");
                 sizeButton.classList.add("btn", "btn-outline-primary", "size-button");
