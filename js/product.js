@@ -109,7 +109,7 @@ const products = [
             "products/Apparel/pikachu-tee2.jpg"
         ],
         category: "Apparel"
-        
+
     },
     {
         id: 21,
@@ -428,7 +428,7 @@ const products = [
         ],
         category: "Dry Fit"
     },
-    
+
     // Figures Products
     {
         id: 9,
@@ -549,6 +549,344 @@ const products = [
             "products/Figures/boruto-funko3.jpg"
         ],
         category: "Figures"
+    },
+
+    //Accesories
+
+    //Keychains
+    {
+        id: 52,
+        name: "Chopper Hat Keychain",
+        price: 18.00,
+        description: "A keychain of Chopper's hat",
+        images: [
+            "products/Keychains/chopper-hat-keychain.jpg"
+        ],
+        category: "Keychains"
+    },
+    {
+        id: 53,
+        name: "Freiza Keychain",
+        price: 18.00,
+        description: "A keychain of Frieza from the Dragon Ball series",
+        images: [
+            "products/Keychains/frieza-keychain.jpg"
+        ],
+        category: "Keychains"
+    },
+    {
+        id: 54,
+        name: "Goku Black Keychain",
+        price: 18.00,
+        description: "A keychain of Chopper's hat",
+        images: [
+            "products/Keychains/goku-black-keychain.jpg"
+        ],
+        category: "Keychains"
+    },
+    {
+        id: 55,
+        name: "Goku Keychain",
+        price: 18.00,
+        description: "A keychain of Goku from the Dragon Ball Series",
+        images: [
+            "products/Keychains/goku-keychain.jpg"
+        ],
+        category: "Keychains"
+    },
+    {
+        id: 56,
+        name: "Luffy Jolly Roger Keychain",
+        price: 18.00,
+        description: "A keychain of Luffy's Jolly Roger",
+        images: [
+            "products/Keychains/luffy-jolly-roger-keychain.jpg"
+        ],
+        category: "Keychains"
+    },
+    {
+        id: 57,
+        name: "Luffy Jolly Roger Keychain",
+        price: 18.00,
+        description: "A keychain of Luffy's Jolly Roger",
+        images: [
+            "products/Keychains/luffy-jolly-roger-keychain2.jpg"
+        ],
+        category: "Keychains"
+
+    },
+    {
+        id: 58,
+        name: "One Piece Keychain",
+        price: 15.00,
+        description: "A keychain featuring the One Piece logo.",
+        images: [
+            "products/Keychains/one-piece-keychain.jpg"
+        ],
+        category: "Keychains"
+    },
+    {
+        id: 59,
+        name: "Mihawk's Yoru Keychain",
+        price: 20.00,
+        description: "A keychain of Mihawk's Yoru sword from One Piece.",
+        images: [
+            "products/Keychains/op-yoru-keychain.jpg"
+        ],
+        category: "Keychains"
+    },
+    {
+        id: 60,
+        name: "Son Goku Keychain",
+        price: 17.00,
+        description: "A keychain of Son Goku in his iconic pose.",
+        images: [
+            "products/Keychains/son-goku-keychain.jpg"
+        ],
+        category: "Keychains"
+    },
+    {
+        id: 61,
+        name: "Thousand Sunny Keychain",
+        price: 22.00,
+        description: "A keychain of the Thousand Sunny ship from One Piece.",
+        images: [
+            "products/Keychains/thousand-sunny-keychain.jpg"
+        ],
+        category: "Keychains"
+    },
+    {
+        id: 62,
+        name: "Vegeta Keychain",
+        price: 18.00,
+        description: "A keychain of Vegeta in his Saiyan armor.",
+        images: [
+            "products/Keychains/vegeta-keychain.jpg"
+        ],
+        category: "Keychains"
+    },
+    {
+        id: 63,
+        name: "Zoro Keychain",
+        price: 19.00,
+        description: "A keychain of Roronoa Zoro with his swords.",
+        images: [
+            "products/Keychains/zoro-keychain.jpg"
+        ],
+        category: "Keychains"
+    },
+    {
+        id: 90,
+        name: "Crocodile Hook Necklace",
+        price: 23.00,
+        description: "A necklace featuring Crocodile's hook hand.",
+        images: [
+            "products/Necklaces/crocodile-hook-necklace.jpg"
+        ],
+        category: "Necklaces"
+    },
+    {
+        id: 64,
+        name: "7 Deadly Sins Mug",
+        price: 18.00,
+        images: ["products/Mugs/7-deadly-sins-mug.jpg"],
+        category: "Mugs"
+    },
+    {
+        id: 65,
+        name: "Attack on Titan Mug",
+        price: 18.00,
+        images: ["products/Mugs/aot-mug.jpg"],
+        category: "Mugs"
+    },
+    {
+        id: 66,
+        name: "Attack on Titan Mug 2",
+        price: 18.00,
+        images: ["products/Mugs/aot-mug2.jpg"],
+        category: "Mugs"
+    },
+    {
+        id: 67,
+        name: "Asta Mug",
+        price: 18.00,
+        images: ["products/Mugs/asta-mug.jpg"],
+        category: "Mugs"
+    },
+    {
+        id: 68,
+        name: "Death Note Mug",
+        price: 18.00,
+        images: ["products/Mugs/death-note-mug.jpg"],
+        category: "Mugs"
+    },
+    {
+        id: 69,
+        name: "Demon Slayer Mug",
+        price: 18.00,
+        images: ["products/Mugs/demon-slayer-mug.jpg"],
+        category: "Mugs"
+    },
+    {
+        id: 70,
+        name: "Dorohedoro Mug",
+        price: 18.00,
+        images: ["products/Mugs/dorohedoro-mug.jpg"],
+        category: "Mugs"
+    },
+    {
+        id: 71,
+        name: "Genshin Impact Mug",
+        price: 18.00,
+        images: ["products/Mugs/genshin-impact-mug.jpg"],
+        category: "Mugs"
+    },
+    {
+        id: 72,
+        name: "Hashira Mug",
+        price: 18.00,
+        images: ["products/Mugs/hashira-mug.jpg"],
+        category: "Mugs"
+    },
+    {
+        id: 73,
+        name: "Levi Mug",
+        price: 18.00,
+        images: ["products/Mugs/levi-mug.jpg"],
+        category: "Mugs"
+    },
+    {
+        id: 74,
+        name: "Love is War Mug",
+        price: 18.00,
+        images: ["products/Mugs/love-is-war-mug.jpg"],
+        category: "Mugs"
+    },
+    {
+        id: 75,
+        name: "Luffy Mug",
+        price: 18.00,
+        images: ["products/Mugs/luffy-mug.jpg"],
+        category: "Mugs"
+    },
+    {
+        id: 76,
+        name: "Mashle Mug",
+        price: 18.00,
+        images: ["products/Mugs/mashle-mug.jpg"],
+        category: "Mugs"
+    },
+    {
+        id: 77,
+        name: "My Neighbor Totoro Mug",
+        price: 18.00,
+        images: ["products/Mugs/my-neighbor-totoro-mug.jpg"],
+        category: "Mugs"
+    },
+    {
+        id: 78,
+        name: "Naruto Mug",
+        price: 18.00,
+        images: ["products/Mugs/naruto-mug.jpg"],
+        category: "Mugs"
+    },
+    {
+        id: 79,
+        name: "Nezuko Mug",
+        price: 18.00,
+        images: ["products/Mugs/nezuko-mug.jpg"],
+        category: "Mugs"
+    },
+    {
+        id: 80,
+        name: "One Piece Wanted Poster Mug",
+        price: 18.00,
+        images: ["products/Mugs/op-wanted-poster-mug.jpg"],
+        category: "Mugs"
+    },
+    {
+        id: 81,
+        name: "Sailor Moon Mug",
+        price: 18.00,
+        images: ["products/Mugs/sailor-moon-mug.jpg"],
+        category: "Mugs"
+    },
+    {
+        id: 82,
+        name: "Solo Leveling Mug",
+        price: 18.00,
+        images: ["products/Mugs/solo-leveling-mug.jpg"],
+        category: "Mugs"
+    },
+    {
+        id: 83,
+        name: "Team 7 Mug",
+        price: 18.00,
+        images: ["products/Mugs/team-7-mug.jpg"],
+        category: "Mugs"
+    },
+    {
+        id: 84,
+        name: "Tokyo Ghoul Mug",
+        price: 18.00,
+        images: ["products/Mugs/tokyo-ghoul-mug.jpg"],
+        category: "Mugs"
+    },
+    {
+        id: 85,
+        name: "Tokyo Revengers Mug",
+        price: 18.00,
+        images: ["products/Mugs/tokyo-revengers-mug.jpg"],
+        category: "Mugs"
+    },
+    {
+        id: 86,
+        name: "Undead Unluck Mug",
+        price: 18.00,
+        images: ["products/Mugs/undead-unluck-mug.jpg"],
+        category: "Mugs"
+    },
+    {
+        id: 87,
+        name: "Vegeta Mug",
+        price: 18.00,
+        images: ["products/Mugs/vegeta-mug.jpg"],
+        category: "Mugs"
+    },
+    {
+        id: 88,
+        name: "Zom 100 Mug",
+        price: 18.00,
+        images: ["products/Mugs/zom-100-mug.jpg"],
+        category: "Mugs"
+    },
+    {
+        id: 89,
+        name: "Zoro Mug",
+        price: 18.00,
+        images: ["products/Mugs/zoro-mug.jpg"],
+        category: "Mugs"
+    },
+
+    {
+        id: 91,
+        name: "King Kai Kanji Necklace",
+        price: 23.00,
+        description: "King Kai's Kanji.",
+        images: [
+            "products/Necklaces/king-kai-necklace.jpg"
+        ],
+        category: "Necklaces"
+    },
+    {
+        id: 92,
+        name: "Thousand Sunny Necklace",
+        price: 23.00,
+        description: "A One Piece mug featuring the Thousand Sunny.",
+        images: [
+            "products/Necklaces/thousand-sunny-necklace.jpg"
+        ],
+        category: "Necklaces"
     }
 ];
 

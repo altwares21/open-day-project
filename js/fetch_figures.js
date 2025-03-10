@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const productCard = document.createElement("div");
         productCard.className = "col-12 col-sm-6 col-md-6 col-lg-4 mb-4";
         productCard.innerHTML = `
-            <div class="card h-100">
+            <div class="card product-card h-100">
                 <a href="product.html?id=${product.id}">
                     <img src="${product.images[0]}" class="card-img-top img-fluid lazy" alt="${product.name}" loading="lazy">
                 </a>
