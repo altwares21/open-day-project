@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const sizes = ["S", "M", "L", "XL", "2XL", "3XL"];
             sizes.forEach(size => {
                 const sizeButton = document.createElement("button");
-                sizeButton.classList.add("btn", "btn-outline-primary", "size-button");
+                sizeButton.classList.add("btn", "btn-outline-primary", "size-button", "ms-2");
                 sizeButton.textContent = size;
                 sizeButton.addEventListener("click", () => {
                     document.querySelectorAll(".size-button").forEach(btn => {
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const sizes = ["S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL"];
             sizes.forEach(size => {
                 const sizeButton = document.createElement("button");
-                sizeButton.classList.add("btn", "btn-outline-primary", "size-button");
+                sizeButton.classList.add("btn", "btn-outline-primary", "size-button", "ms-2");
                 sizeButton.textContent = size;
                 sizeButton.addEventListener("click", () => {
                     document.querySelectorAll(".size-button").forEach(btn => {

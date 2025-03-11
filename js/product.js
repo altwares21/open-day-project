@@ -2,7 +2,7 @@ const products = [
     // Apparel Products
     {
         id: 1,
-        name: "Luffy Tee",
+        name: "Monkey D. Luffy Tee",
         price: 35.00,
         description: "A One Piece t-shirt featuring Monkey D. Luffy.",
         images: [
@@ -35,7 +35,7 @@ const products = [
     },
     {
         id: 4,
-        name: "Okarun Tee",
+        name: "Takakura Ken (Okarun) Tee",
         price: 35.00,
         description: "A t-shirt featuring Okarun from Dandadan.",
         images: [
@@ -57,7 +57,7 @@ const products = [
     },
     {
         id: 6,
-        name: "Turbo Granny Tee",
+        name: "Dandadan Turbo Granny Tee",
         price: 35.00,
         description: "A Turbo Granny t-shirt from Dandadan.",
         images: [
@@ -79,7 +79,7 @@ const products = [
     },
     {
         id: 8,
-        name: "Neko Luffy Tee",
+        name: "Neko D. Mewffy Tee",
         price: 35.00,
         description: "A Neko Luffy t-shirt.",
         images: [
@@ -126,7 +126,7 @@ const products = [
         id: 22,
         name: "My Life Story Tee",
         price: 35.00,
-        description: "A Jujutsu Kaisen-themed t-shirt.",
+        description: "My Life Story t-shirt.",
         images: [
             "products/Apparel/myLifeStory-tee.jpg",
             "products/Apparel/myLifeStory-tee2.jpg"
@@ -270,7 +270,7 @@ const products = [
     },
     {
         id: 36,
-        name: "Momo Dry Fit Tee",
+        name: "Ayase Momo Dry Fit Tee",
         price: 50.00,
         description: "A Dandadan-themed dry fit t-shirt.",
         images: [
@@ -300,7 +300,7 @@ const products = [
     },
     {
         id: 39,
-        name: "Nezuku Dry Fit Tee",
+        name: "Nezuko Dry Fit Tee",
         price: 50.00,
         description: "A Demon Slayer dry fit t-shirt.",
         images: [
@@ -310,7 +310,7 @@ const products = [
     },
     {
         id: 40,
-        name: "Okarun Dry Fit Tee",
+        name: "Takakura Ken (Okarun) Dry Fit Tee",
         price: 50.00,
         description: "A Dandadan-themed dry fit t-shirt.",
         images: [
@@ -350,7 +350,7 @@ const products = [
     },
     {
         id: 44,
-        name: "Alternate One Piece Dry Fit Tee",
+        name: "Black/White One Piece Dry Fit Tee",
         price: 50.00,
         description: "An alternate One Piece-themed dry fit t-shirt.",
         images: [
@@ -360,21 +360,22 @@ const products = [
     },
     {
         id: 45,
-        name: "Alternate Sasuke Dry Fit Tee",
-        price: 50.00,
-        description: "An alternate Naruto-themed dry fit t-shirt.",
-        images: [
-            "products/DryFit/sasuke-dryfit2.jpg"
-        ],
-        category: "Dry Fit"
-    },
-    {
-        id: 46,
+        category: "Dry Fit",
         name: "Sasuke Dry Fit Tee",
         price: 50.00,
         description: "A Naruto-themed dry fit t-shirt.",
         images: [
             "products/DryFit/sasuke-dryfit.jpg"
+        ],
+        category: "Dry Fit"
+    },
+    {
+        id: 46,
+        name: "Alternate Sasuke Dry Fit Tee",
+        price: 50.00,
+        description: "An alternate Naruto-themed dry fit t-shirt.",
+        images: [
+            "products/DryFit/sasuke-dryfit2.jpg"
         ],
         category: "Dry Fit"
     },
@@ -400,7 +401,7 @@ const products = [
     },
     {
         id: 49,
-        name: "Levi Dry Fit Tee",
+        name: "Levi Ackerman Dry Fit Tee",
         price: 50.00,
         description: "An Attack on Titan-themed dry fit t-shirt.",
         images: [
@@ -433,7 +434,7 @@ const products = [
     {
         id: 9,
         name: "Luffy Funko Pop",
-        price: 55.00, // Updated price
+        price: 55.00,
         description: "A Funko Pop figure of Luffy from One Piece.",
         images: [
             "products/Figures/luffy-funko.jpg",
@@ -445,7 +446,7 @@ const products = [
     {
         id: 10,
         name: "Aipom Funko Pop",
-        price: 55.00, // Updated price
+        price: 55.00,
         description: "A Funko Pop figure of Aipom from Pokémon.",
         images: [
             "products/Figures/aipom-funko.jpg",
@@ -457,7 +458,7 @@ const products = [
     {
         id: 11,
         name: "Gambit Funko Pop",
-        price: 65.00, // Updated price
+        price: 65.00,
         description: "A Funko Pop of Gambit from X-Men.",
         images: [
             "products/Figures/gambit-funko.jpg",
@@ -469,7 +470,7 @@ const products = [
     {
         id: 12,
         name: "Goku Funko Pop",
-        price: 65.00, // Updated price
+        price: 65.00, 
         description: "A Funko Pop of Goku.",
         images: [
             "products/Figures/goku-funko.jpg",
@@ -481,7 +482,7 @@ const products = [
     {
         id: 13,
         name: "Meliodas Funko Pop",
-        price: 65.00, // Updated price
+        price: 65.00, 
         description: "A Funko Pop figure of Meliodas from Seven Deadly Sins.",
         images: [
             "products/Figures/melodias-funko.jpg",
@@ -505,7 +506,7 @@ const products = [
     {
         id: 15,
         name: "Tengen Uzui Funko Pop",
-        price: 65.00, // Updated price
+        price: 65.00, 
         description: "A Funko Pop figure of Tengen Uzui from Demon Slayer.",
         images: [
             "products/Figures/tengen-funko.jpg",
@@ -517,7 +518,7 @@ const products = [
     {
         id: 16,
         name: "Venom Funko Pop",
-        price: 55.00, // Updated price
+        price: 55.00,
         description: "A Funko Pop figure of Venom.",
         images: [
             "products/Figures/venom-funko.jpg",
@@ -529,7 +530,7 @@ const products = [
     {
         id: 17,
         name: "Wonder Woman Funko Pop",
-        price: 35.00, // Updated price
+        price: 35.00,
         description: "A Funko Pop figure of Wonder Woman.",
         images: [
             "products/Figures/ww-funko.jpg",
@@ -540,8 +541,8 @@ const products = [
     },
     {
         id: 18,
-        name: "Boruto Funko Pop",
-        price: 50.00, // Updated price
+        name: "Boruto Uzumaki Funko Pop",
+        price: 50.00,
         description: "A Funko Pop figure of Boruto.",
         images: [
             "products/Figures/boruto-funko.jpg",
@@ -597,7 +598,7 @@ const products = [
     {
         id: 56,
         name: "Luffy Jolly Roger Keychain",
-        price: 18.00,
+        price: 20.00,
         description: "A keychain of Luffy's Jolly Roger",
         images: [
             "products/Keychains/luffy-jolly-roger-keychain.jpg"
@@ -607,7 +608,7 @@ const products = [
     {
         id: 57,
         name: "Luffy Jolly Roger Keychain",
-        price: 18.00,
+        price: 20.00,
         description: "A keychain of Luffy's Jolly Roger",
         images: [
             "products/Keychains/luffy-jolly-roger-keychain2.jpg"
@@ -618,7 +619,7 @@ const products = [
     {
         id: 58,
         name: "One Piece Keychain",
-        price: 15.00,
+        price: 18.00,
         description: "A keychain featuring the One Piece logo.",
         images: [
             "products/Keychains/one-piece-keychain.jpg"
@@ -638,7 +639,7 @@ const products = [
     {
         id: 60,
         name: "Son Goku Keychain",
-        price: 17.00,
+        price: 18.00,
         description: "A keychain of Son Goku in his iconic pose.",
         images: [
             "products/Keychains/son-goku-keychain.jpg"
@@ -648,7 +649,7 @@ const products = [
     {
         id: 61,
         name: "Thousand Sunny Keychain",
-        price: 22.00,
+        price: 20.00,
         description: "A keychain of the Thousand Sunny ship from One Piece.",
         images: [
             "products/Keychains/thousand-sunny-keychain.jpg"
@@ -668,22 +669,12 @@ const products = [
     {
         id: 63,
         name: "Zoro Keychain",
-        price: 19.00,
+        price: 18.00,
         description: "A keychain of Roronoa Zoro with his swords.",
         images: [
             "products/Keychains/zoro-keychain.jpg"
         ],
         category: "Keychains"
-    },
-    {
-        id: 90,
-        name: "Crocodile Hook Necklace",
-        price: 23.00,
-        description: "A necklace featuring Crocodile's hook hand.",
-        images: [
-            "products/Necklaces/crocodile-hook-necklace.jpg"
-        ],
-        category: "Necklaces"
     },
     {
         id: 64,
@@ -694,14 +685,14 @@ const products = [
     },
     {
         id: 65,
-        name: "Attack on Titan Mug",
+        name: "AOT Mikasa & Eren Mug",
         price: 18.00,
         images: ["products/Mugs/aot-mug.jpg"],
         category: "Mugs"
     },
     {
         id: 66,
-        name: "Attack on Titan Mug 2",
+        name: "Attack On Titan Mug",
         price: 18.00,
         images: ["products/Mugs/aot-mug2.jpg"],
         category: "Mugs"
@@ -757,14 +748,14 @@ const products = [
     },
     {
         id: 74,
-        name: "Love is War Mug",
+        name: "Kaguya-Sama Love is War Mug",
         price: 18.00,
         images: ["products/Mugs/love-is-war-mug.jpg"],
         category: "Mugs"
     },
     {
         id: 75,
-        name: "Luffy Mug",
+        name: "Monkey D. Luffy Mug",
         price: 18.00,
         images: ["products/Mugs/luffy-mug.jpg"],
         category: "Mugs"
@@ -820,7 +811,7 @@ const products = [
     },
     {
         id: 83,
-        name: "Team 7 Mug",
+        name: "Naruto Team 7 Mug",
         price: 18.00,
         images: ["products/Mugs/team-7-mug.jpg"],
         category: "Mugs"
@@ -867,11 +858,20 @@ const products = [
         images: ["products/Mugs/zoro-mug.jpg"],
         category: "Mugs"
     },
-
+    {
+        id: 90,
+        name: "Crocodile Hook Necklace",
+        price: 15.00,
+        description: "A necklace featuring Crocodile's hook hand.",
+        images: [
+            "products/Necklaces/crocodile-hook-necklace.jpg"
+        ],
+        category: "Necklaces"
+    },
     {
         id: 91,
         name: "King Kai Kanji Necklace",
-        price: 23.00,
+        price: 20.00,
         description: "King Kai's Kanji.",
         images: [
             "products/Necklaces/king-kai-necklace.jpg"
@@ -881,7 +881,7 @@ const products = [
     {
         id: 92,
         name: "Thousand Sunny Necklace",
-        price: 23.00,
+        price: 15.00,
         description: "A One Piece mug featuring the Thousand Sunny.",
         images: [
             "products/Necklaces/thousand-sunny-necklace.jpg"
