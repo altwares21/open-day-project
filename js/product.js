@@ -890,49 +890,58 @@ const products = [
     }
 ];
 
-document.addEventListener("DOMContentLoaded", function () {
-    const urlParams = new URLSearchParams(window.location.search);
-    const productId = parseInt(urlParams.get('id')); // Get the product ID from the URL
+document.addEventListener('DOMContentLoaded', function() {
+    const productId = new URLSearchParams(window.location.search).get('id');
+    fetchProductDetails(productId);
 
-    // Find the product from the hardcoded array based on the ID
-    const product = products.find(item => item.id === productId);
+    document.getElementById('increase-quantity').addEventListener('click', function() {
+        const quantityElement = document.getElementById('quantity');
+        let quantity = parseInt(quantityElement.textContent);
+        quantityElement.textContent = ++quantity;
+    });
 
-    if (product) {
-        // Update product information dynamically
-        document.getElementById("product-title").textContent = product.name;
-        document.getElementById("product-price").textContent = `$${product.price.toFixed(2)}`;
-        document.getElementById("product-description").textContent = product.description;
+    document.getElementById('decrease-quantity').addEventListener('click', function() {
+        const quantityElement = document.getElementById('quantity');
+        let quantity = parseInt(quantityElement.textContent);
+        if (quantity > 1) {
+            quantityElement.textContent = --quantity;
+        }
+    });
 
-        const productImage = document.getElementById("product-image");
-        productImage.src = product.images[0]; // Set the first image as the default product image
-
-        // Create thumbnails dynamically for the product images
-        const imageThumbnailsContainer = document.getElementById("image-thumbnails");
-        product.images.forEach((image, index) => {
-            const thumbnail = document.createElement("img");
-            thumbnail.src = image;
-            thumbnail.classList.add("thumbnail");
-            thumbnail.alt = `${product.name} image ${index + 1}`;
-
-            // Add active class for the first image
-            if (index === 0) {
-                thumbnail.classList.add("active");
-            }
-
-            // Add thumbnail to the container
-            imageThumbnailsContainer.appendChild(thumbnail);
-
-            // Event listener for changing the main image on thumbnail click
-            thumbnail.addEventListener("click", () => {
-                productImage.src = image;
-                document.querySelectorAll(".thumbnail").forEach(thumb => {
-                    thumb.classList.remove("active");
-                });
-                thumbnail.classList.add("active");
-            });
-        });
-    } else {
-        // If the product is not found, display an error
-        console.error("Product not found!");
-    }
+    document.querySelector('.add-to-cart').addEventListener('click', function() {
+        const product = {
+            id: productId,
+            name: document.getElementById('product-title').textContent,
+            price: document.getElementById('product-price').textContent.replace('$', ''),
+            quantity: document.getElementById('quantity').textContent,
+            image: document.getElementById('product-image').src,
+            size: document.querySelector('.size-button.active') ? document.querySelector('.size-button.active').textContent : null
+        };
+        addToCart(product);
+        showPopup("Item added to cart successfully!");
+    });
 });
+
+function fetchProductDetails(productId) {
+    // Fetch product details from your API or data source
+    // For demonstration, we'll use a static object
+    const product = products.find(p => p.id == productId);
+
+    document.getElementById('product-title').textContent = product.name;
+    document.getElementById('product-price').textContent = `$${product.price}`;
+    document.getElementById('product-description').textContent = product.description;
+    document.getElementById('product-image').src = product.images[0];
+
+    if (product.category === "Apparel" || product.category === "Dry Fit") {
+        document.getElementById('product-sizes').style.display = 'block';
+    }
+}
+
+function showPopup(message) {
+    const popup = document.getElementById('popup');
+    popup.textContent = message;
+    popup.style.display = 'block';
+    setTimeout(() => {
+        popup.style.display = 'none';
+    }, 3000);
+}

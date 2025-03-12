@@ -6,14 +6,17 @@ function addToCart(product) {
     if (existingProductIndex !== -1) {
         cart[existingProductIndex].quantity += parseInt(product.quantity);
     } else {
-        cart.push({
+        const newProduct = {
             id: product.id,
             name: product.name,
-            size: product.size,
             price: product.price,
             quantity: parseInt(product.quantity),
-            image: product.image // Ensure this property is correctly set
-        });
+            image: product.image
+        };
+        if (product.size) {
+            newProduct.size = product.size;
+        }
+        cart.push(newProduct);
     }
     localStorage.setItem('cart', JSON.stringify(cart));
     updateCartSummary();
@@ -25,7 +28,7 @@ function updateCartSummary() {
     const cartTotal = cart.reduce((total, item) => total + parseFloat(item.price) * item.quantity, 0).toFixed(2);
     const cartCountElement = document.getElementById('cart-count');
     const cartTotalElement = document.getElementById('cart-total');
-    const cartTotalBottomElement = document.querySelector('#cart-details #cart-total'); // Update this line
+    const cartTotalBottomElement = document.querySelector('#cart-details #cart-total');
     if (cartCountElement) {
         cartCountElement.textContent = cartCount;
     }
@@ -78,12 +81,12 @@ function renderCartItems() {
                 <h3 class="cart-item-name" data-id="${item.id}">${item.name}</h3>
                 <p>Price: $${item.price}</p>
                 <div class="quantity-controls">
-                    <button class="decrease-quantity" data-id="${item.id}" data-size="${item.size}">-</button>
+                    <button class="decrease-quantity btn btn-outline-secondary" data-id="${item.id}" data-size="${item.size}">-</button>
                     <span class="quantity-display">${item.quantity}</span>
-                    <button class="increase-quantity" data-id="${item.id}" data-size="${item.size}">+</button>
+                    <button class="increase-quantity btn btn-outline-secondary" data-id="${item.id}" data-size="${item.size}">+</button>
                 </div>
                 ${item.size ? `<p>Size: ${item.size}</p>` : ''}
-                <button class="remove-item" data-id="${item.id}" data-size="${item.size}">Remove</button>
+                <button class="remove-item btn btn-outline-danger" data-id="${item.id}" data-size="${item.size}">Remove</button>
             </div>
         `;
         cartItemsContainer.appendChild(itemElement);
@@ -110,7 +113,7 @@ function renderCartItems() {
                 cart[productIndex].quantity--;
                 localStorage.setItem('cart', JSON.stringify(cart));
                 renderCartItems();
-                updateCartSummary(); // Update cart summary
+                updateCartSummary();
             }
         });
     });
@@ -125,7 +128,7 @@ function renderCartItems() {
                 cart[productIndex].quantity++;
                 localStorage.setItem('cart', JSON.stringify(cart));
                 renderCartItems();
-                updateCartSummary(); // Update cart summary
+                updateCartSummary();
             }
         });
     });
