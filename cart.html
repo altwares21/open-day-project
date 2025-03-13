@@ -10,7 +10,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .cart-item {
-            border: 1px solid #ccc;
             margin-bottom: 10px;
             padding: 10px;
         }
@@ -18,11 +17,11 @@
             max-width: 100px;
             max-height: 100px;
         }
-        .cart-item h3 {
-            font-size: 1.5rem;
+        .cart-item h5 {
+            font-size: 1.25rem;
         }
         .cart-item p {
-            font-size: 1.25rem;
+            font-size: 1rem;
         }
         .cart-item .increase-quantity, .cart-item .decrease-quantity {
             width: 30px;
@@ -31,7 +30,6 @@
             justify-content: center;
             align-items: center;
         }
-
         .remove-item {
             height: 30px;
             width: 5rem;
@@ -84,11 +82,15 @@
     <main class="container my-5">
         <div class="row justify-content-center">
             <h2 class="text-center mb-4">Cart</h2>
+            <div class="col-12 text-center mb-4">
+                <h4>Total: $<span id="cart-total">0.00</span></h4>
+            </div>
             <div id="cart-items" class="row justify-content-center"></div>
             <div class="text-center">
                 <button class="btn btn-success checkout-button">Checkout</button>
             </div>
         </div>
+        
     </main>
     <footer class="bg-dark text-white text-center py-3">
         <p>&copy; 2025 My Online Store</p>
