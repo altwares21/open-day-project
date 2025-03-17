@@ -16,14 +16,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function updateSearchResultsHeading(count) {
     const heading = document.getElementById('search-results-heading');
-    heading.textContent = `Search Results (${count})`;
+    heading.textContent = count > 0 ? `Search Results (${count})` : 'No results';
 }
 
 function renderProducts(products) {
     const productList = document.getElementById('product-list');
     productList.innerHTML = '';
     products.forEach(product => {
-        console.log(`Rendering product: ${product.name}, Image path: ${product.images[0]}`);
         const productElement = document.createElement('div');
         productElement.className = 'col-12 col-sm-6 col-md-6 col-lg-4 mb-4';
         productElement.innerHTML = `
@@ -39,4 +38,42 @@ function renderProducts(products) {
         `;
         productList.appendChild(productElement);
     });
+
+    if (products.length === 0) {
+        document.getElementById('catalog-links').innerHTML = `
+            <h2 class="text-center mb-4 display-4">Shop</h2>
+        <div class="row mb-4">
+            <div class="col-md-2 mb-4 offset-md-3">
+                <div class="card catalog-card">
+                    <a href="shop_apparel.html" class="section-link">
+                        <div class="square-image">
+                            <img src="products/Apparel/neko-luffy-tee2.jpg" alt="Apparel">
+                        </div>
+                        <div class="label">Apparel</div>
+                    </a>
+                </div>
+            </div>
+            <div class=" col-md-2 mb-4 mx-2">
+                <div class="card catalog-card">
+                    <a href="shop_accessories.html" class="section-link">
+                        <div class="square-image">
+                            <img src="products/Keychains/accessory-img.jpg" alt="Accessories">
+                        </div>
+                        <div class="label">Accessories</div>
+                    </a>
+                </div>
+            </div>
+                <div class=" col-md-2 mb-4 mx-2">
+                    <div class="card catalog-card">
+                        <a href="shop_figures.html" class="section-link">
+                            <div class="square-image">
+                                <img src="products/Figures/tengen-funko.jpg" alt="Figures">
+                            </div>
+                            <div class="label">Figures</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
 }

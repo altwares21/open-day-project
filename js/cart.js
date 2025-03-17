@@ -1,6 +1,4 @@
-const cart = [];
-
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     updateCartSummary();
     renderCartItems();
 });
@@ -19,15 +17,10 @@ function hideSizePopup() {
 
 // Add a product to the cart
 function addToCart(product) {
-    // If product is Apparel or Dry Fit and no size is selected, show the size popup
-    if ((product.category === 'Apparel' || product.category === 'Dry Fit') && !product.size) {
-        showSizePopup();
-        return;
-    }
     
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     const existingProductIndex = cart.findIndex(item => item.id === product.id && (item.size === product.size || (!item.size && !product.size)));
-    
+
     if (existingProductIndex !== -1) {
         cart[existingProductIndex].quantity += parseInt(product.quantity);
     } else {
@@ -37,14 +30,12 @@ function addToCart(product) {
             price: product.price,
             quantity: parseInt(product.quantity),
             image: product.image,
-            category: product.category
+            category: product.category,
+            size: product.size || null
         };
-        if (product.size) {
-            newProduct.size = product.size;
-        }
         cart.push(newProduct);
     }
-    
+
     localStorage.setItem('cart', JSON.stringify(cart));
     updateCartSummary();
     renderCartItems();
@@ -62,7 +53,7 @@ function updateCartSummary() {
 // Remove a product from the cart
 function removeFromCart(productId, size) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    cart = cart.filter(item => !(item.id === productId && (!item.size || item.size === size)));
+    cart = cart.filter(item => !(item.id === productId && (item.size === size || (!item.size && !size))));
     localStorage.setItem('cart', JSON.stringify(cart));
     updateCartSummary();
     renderCartItems();
@@ -71,7 +62,7 @@ function removeFromCart(productId, size) {
 // Update quantity of a cart item
 function updateCartItemQuantity(productId, size, change) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    const productIndex = cart.findIndex(item => item.id === productId && item.size === size);
+    const productIndex = cart.findIndex(item => item.id === productId && (item.size === size || (!item.size && !size)));
     if (productIndex !== -1) {
         cart[productIndex].quantity += change;
         if (cart[productIndex].quantity <= 0) {
@@ -92,24 +83,24 @@ function renderCartItems() {
 
     cart.forEach(item => {
         const itemElement = document.createElement('div');
-        itemElement.className = 'cart-item col-12 col-md-6 col-lg-4';
+        itemElement.className = 'cart-item col-12';
         itemElement.innerHTML = `
-            <div class="card">
-                <a href="product.html?id=${item.id}">
-                    <img src="${item.image}" alt="${item.name}" class="card-img-top cart-item-image" data-id="${item.id}">
+            <div class="card d-flex flex-row align-items-center mb-3 p-3 shadow-sm">
+            <a href="product.html?id=${item.id}">
+                <img src="${item.image}" alt="${item.name}" class="cart-item-image ms-3" style="width: 150px; height: auto;" data-id="${item.id}">
                 </a>
-                <div class="card-body">
-                    <a href="product.html?id=${item.id}">
-                        <h5 class="card-title cart-item-name" data-id="${item.id}">${item.name}</h5>
+                <div class="cart-item-details ms-3">
+            <a href="product.html?id=${item.id}" class="text-decoration-none text-black">
+                    <h3 class="cart-item-name mb-2" data-id="${item.id}">${item.name}</h3>
                     </a>
-                    <p class="card-text">Price: $${item.price}</p>
-                    <div class="quantity-controls d-flex justify-content-between align-items-center">
-                        <button class="decrease-quantity btn btn-outline-secondary" data-id="${item.id}" data-size="${item.size}">-</button>
-                        <span class="quantity-display">${item.quantity}</span>
-                        <button class="increase-quantity btn btn-outline-secondary" data-id="${item.id}" data-size="${item.size}">+</button>
+                    <p class="mb-2">Price: $${item.price}</p>
+                    <div class="quantity-controls d-flex align-items-center mb-3">
+                        <button class="btn btn-secondary decrease-quantity me-2" data-id="${item.id}" data-size="${item.size || ''}">-</button>
+                        <span class="quantity-display mx-2">${item.quantity}</span>
+                        <button class="btn btn-secondary increase-quantity ms-2" data-id="${item.id}" data-size="${item.size || ''}">+</button>
                     </div>
-                    ${item.size ? `<p>Size: ${item.size}</p>` : ''}
-                    <button class="remove-item btn btn-outline-danger mt-2" data-id="${item.id}" data-size="${item.size}">Remove</button>
+                    ${item.size ? `<p class="mb-2">Size: ${item.size}</p>` : ''}
+                    <button class="btn btn-danger remove-item mt-2" data-id="${item.id}" data-size="${item.size || ''}">Remove</button>
                 </div>
             </div>
         `;
@@ -121,27 +112,24 @@ function renderCartItems() {
 }
 
 // Event delegation for cart buttons
-document.addEventListener('click', function(event) {
+document.addEventListener('click', function (event) {
     const target = event.target;
 
-    // Increase quantity button
     if (target.classList.contains('increase-quantity')) {
-        const productId = parseInt(target.getAttribute('data-id'));
-        const size = target.getAttribute('data-size');
+        const productId = target.getAttribute('data-id');
+        const size = target.getAttribute('data-size') || null;
         updateCartItemQuantity(productId, size, 1);
     }
 
-    // Decrease quantity button
     if (target.classList.contains('decrease-quantity')) {
-        const productId = parseInt(target.getAttribute('data-id'));
-        const size = target.getAttribute('data-size');
+        const productId = target.getAttribute('data-id');
+        const size = target.getAttribute('data-size') || null;
         updateCartItemQuantity(productId, size, -1);
     }
 
-    // Remove item button
     if (target.classList.contains('remove-item')) {
-        const productId = parseInt(target.getAttribute('data-id'));
-        const size = target.getAttribute('data-size');
+        const productId = target.getAttribute('data-id');
+        const size = target.getAttribute('data-size') || null;
         removeFromCart(productId, size);
     }
 });
